@@ -1,0 +1,679 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>大学生结构模型参赛手册</title>
+<style>
+<!--
+.large {  font-size: 10.5pt;line-height: 16pt}
+-->
+</style>
+</head>
+
+<body>
+
+<p align="center"><br>
+<span lang="zh-cn"><font size="4"><b>
+<TABLE width=550 align=center border=0>
+  
+  <TR vAlign=top>
+    <TD>
+      <CENTER class=large><BR><!-SSE START SSE-><!-SSE WIDTH=100% SSE-></CENTER>
+      <P align=center><!-- #BeginEditable "%B1%EA%CC%E2" --><FONT 
+      size=4><B>　表单标记</B></FONT><!-- #EndEditable --><BR><!-- #BeginEditable "%D7%F7%D5%DF%BC%B0%CA%B1%BC%E4" -->　<!-- #EndEditable --></P><!-- #BeginEditable "%D5%FD%CE%C4" --><SPAN 
+      class=large><FONT color=#000000></FONT></SPAN>
+      <TABLE class=large cellSpacing=0 cellPadding=5 width="100%" border=0>
+        <TBODY class=article>
+        <TR vAlign=top>
+          <TD class=article>
+            <P><SPAN><A href="#1">&lt;FORM&gt; &lt;INPUT&gt;</A> <BR>INPUT 的种类： 
+            <A href="#text">Text</A>, <A href="#radio">Radio</A>,<A 
+            href="#checkbox">Checkbox</A>, <A href="#password">Password</A>, <A 
+            href="#submit">Submit/Reset</A>, <A href="#image">Image</A>, <A 
+            href="#file">File</A>, <A href="#hidden">Hidden</A>, <A 
+            href="#button">Button</A>。 <BR><A href="#2">&lt;SELECT&gt; 
+            &lt;OPTION&gt;</A> <BR><A href="#3">&lt;TEXTAREA&gt;</A> </SPAN></P>
+            <P>(<FONT 
+        color=#ff0000>注意</FONT>：本文例子中的链接仅仅是示例，点击后并不会出现任何结果)</P></TD></TR>
+        <TR>
+          <TD class=article bgColor=#bbd1d1>
+            <DIV style="FONT-SIZE: 9pt; FONT-FAMILY: 新细明体"><FONT color=#ca00ca>■ 
+            引子</FONT></DIV></TD></TR>
+        <TR>
+          <TD class=article><SPAN>表单的用处很多，于网上无处不见，当然是配合 CGI 使用为佳，所以馈下有意使用或学 习 
+            CGI 的话，表单设计见必需的，这一节介绍的标记不多，但其参数变化很多。一份表单的基本架构是：<FONT color=#ff80c0>在 
+            &lt;FORM&gt; 标记 的包围下加上一种或以上的表单输入方式及一个或以上的按键。</FONT> </SPAN></TD></TR>
+        <TR>
+          <TD class=article bgColor=#bbd1d1>
+            <TABLE cellSpacing=0 cellPadding=0 width="100%" align=center>
+              
+              <TR>
+                <TD>
+                  <DIV style="FONT-SIZE: 9pt; FONT-FAMILY: 新细明体"><FONT 
+                  color=#ca00ca><A name=1><U>■</U></A>&lt;FORM&gt; &lt;INPUT&gt; 
+                  ：</FONT></DIV></TD>
+                <TD align=right>
+                  <DIV style="FONT-SIZE: 9pt; FONT-FAMILY: 新细明体"><A 
+                  href="#top">▲Top</A></DIV></TD></TR></TABLE></TD></TR>
+        <TR>
+          <TD class=article><SPAN>&lt;FORM&gt;称为<FONT 
+            color=#ff0000>表单</FONT>标记，用以宣告此为表单模式，属于一个容器标记，表示其它表单标记需要在它的包围中才有效，&lt;INPUT&gt;便是其中的一个，用以设定各种输入资料的方法。它 
+            是一个空标记。 </SPAN>
+            <P><SPAN>&lt;FORM&gt; 的参数设定（常用）： <BR>例如： &lt;form <FONT 
+            color=#ff0000>action</FONT>="http://your.isp.com/cgi-local/example.cgi" 
+            <FONT color=#ff0000>method</FONT>="POST"&gt; </SPAN>
+            <UL>
+              <LI><SPAN><FONT 
+              color=#ff0000>action</FONT>="http://your.isp.com/cgi-local/example.cgi" 
+              <BR>表单通常是与 CGI 配合使用的，参数 action 便是用以指明该 CGI 程式的位置，这 样此表单所填的资料才能正确传给 
+              CGI 作处理。若馈下没有 CGI 以进行测试，可 设定此参数为 ACTION="mailto:<FONT 
+              color=#ff0000>your@email.com</FONT>" 那样该表单所填的资料将会寄至 此电邮地址（红色部分）。 
+              </SPAN>
+              <LI><SPAN><FONT color=#ff0000>method</FONT>="POST" <BR>传送资料给 CGI 
+              的的方式，可选值为 <FONT color=#ff0000>POST</FONT>, <FONT 
+              color=#ff0000>GET</FONT>。你只需记住<FONT 
+              color=#ff0000>POST</FONT>容许传送大量资料，但 <FONT 
+              color=#ff0000>GET</FONT>则只接受低于 1K 的资 
+              料，所以你若看过别人的表单原始码的话，你会发现申请表单用的是<FONT color=#ff0000>POST</FONT> 而搜 
+              找器用的是 <FONT color=#ff0000>GET</FONT>。 </SPAN></LI></UL>
+            <P><SPAN>&lt;INPUT&gt; 的参数设定（常用）： <BR>由于其第一个参数 type 
+            己有很多的选择，而不同的选择表示出不同的输入方式，且其它 参数亦因此而异，故以下将独立介绍不同输入方式及其它参数设定。 </SPAN>
+            <UL>
+              <LI><SPAN><FONT color=#ff0000>type</FONT>="Text" <BR>可选值为 <A 
+              href="#text">Text</A>, <A href="#radio">Radio</A>,<A 
+              href="#checkbox">Checkbox</A>, <A href="#password">Password</A>, 
+              <A href="#submit">Submit/Reset</A>, <A href="#image">Image</A>, <A 
+              href="#file">File</A>, <A href="#hidden">Hidden</A>, <A 
+              href="#button">Button</A>。 </SPAN></LI></UL>
+            <HR color=#ff0000 noShade SIZE=2>
+            <SPAN><A name=text></A><FONT color=#ff00ff>输入方式一：</FONT> <FONT 
+            color=#ff0000>Text</FONT> （单行文字盒） </SPAN>
+            <P><SPAN>例如&lt;input <FONT color=#ff0000>type</FONT>="Text" <FONT 
+            color=#ff0000>name</FONT>="age" <FONT 
+            color=#ff0000>value</FONT>="20" <FONT 
+            color=#ff0000>align</FONT>="MIDDLE" <FONT 
+            color=#ff0000>size</FONT>="2" <FONT 
+            color=#ff0000>maxlength</FONT>="255"&gt; </SPAN>
+            <UL>
+              <LI><SPAN><FONT color=#ff0000>type</FONT>="Text" <BR>输入方式为 
+              Text，能产生一单行文字盒，上限为 255 字元。 </SPAN>
+              <LI><SPAN><FONT color=#ff0000>name</FONT>="age" 
+              <BR>此一单行文字盒名称，这是最重要的一个，方便 CGI 辨认由表单传来的资料，虽 说可随便命名，但通常 CGI 
+              程式中都有指定名称，若转用其它名称便需要修改该 CGI 程式了，名称可为没空白没特别符号的英文或数字，有大小写的分别，可以 写成 
+              Your_Age，若有访客于此表单此一文字盒填入 40 的话，那末传给 CGI 的字 串便是 Your_Age=40。 
+</SPAN>
+              <LI><SPAN><FONT color=#ff0000>value</FONT>="20" 
+              <BR>此一单行文字盒内定值。若不填写则文字盒是空白的，等待访客亲自键入，若 value="<FONT 
+              color=#ff0000>20</FONT>" 的话， 20 便会出现在文字盒中，当然访客可以修改之。 </SPAN>
+              <LI><SPAN><FONT color=#ff0000>align</FONT>="MIDDLE" <BR>可选值：top, 
+              middle, bottom, left, right, texttop, baseline, absmiddle. 没太大有处。 
+              </SPAN>
+              <LI><SPAN><FONT color=#ff0000>size</FONT>="2" 
+              <BR>此一单行文字盒显示的长度，若馈下是采用 Big5 编码的中文网页便要小心，同 size 的文字盒 NC 会显示得比 IE 
+              狻长。 </SPAN>
+              <LI><SPAN><FONT color=#ff0000>maxlength</FONT>="255" 
+              <BR>此一单行文字盒可输入字元的上限，为方便编排资料或避免错输入等，宜设定上 限，例如输入电话或 ICQ UIN 的可设为 
+              8，年龄为 2 等。 </SPAN></LI></UL>
+            <P><SPAN>例子： </SPAN>
+            <TABLE cellSpacing=0 cellPadding=2 width="100%" border=1>
+              
+              <TR>
+                <TD width="4%" bgColor=#0000b7><SPAN><FONT 
+                  color=#ffffff>原始码</FONT></SPAN></TD>
+                <TD vAlign=top bgColor=#ffffff><SPAN><FONT 
+                  color=#009b00>&lt;form 
+                  action="http://your.isp.com/cgi-local/example.cgi" 
+                  method="POST"&gt;</FONT> <BR>请填入电话号码：<FONT 
+                  color=#009595>&lt;input type="Text" name="phone" value="" 
+                  size="10" maxlength="8"&gt;</FONT> <BR><FONT 
+                  color=#009b00>&lt;/form&gt;</FONT> </SPAN></TD></TR>
+              <TR>
+                <TD width="4%" bgColor=#0000b7><SPAN><FONT 
+                  color=#ffffff>显示结果</FONT></SPAN></TD>
+                <TD bgColor=#ffffff>
+                  <FORM action=http://your.isp.com/cgi-local/example.cgi 
+                  method=post><SPAN>请填入电话号码： <INPUT maxLength=8 size=10 
+                  name=phone> </SPAN></FORM></TD></TR></TABLE>
+            <HR color=#ff0000 noShade SIZE=2>
+            <SPAN><A name=radio></A><FONT color=#ff00ff>输入方式二：</FONT> <FONT 
+            color=#ff0000>Radio</FONT> （单一选择） </SPAN>
+            <P><SPAN>例如：&lt;input <FONT color=#ff0000>type</FONT>="Radio" <FONT 
+            color=#ff0000>name</FONT>="gender" <FONT 
+            color=#ff0000>value</FONT>="female" <FONT 
+            color=#ff0000>align</FONT>="MIDDLE" <FONT 
+            color=#ff0000>checked</FONT>&gt; </SPAN>
+            <UL>
+              <LI><SPAN><FONT color=#ff0000>type</FONT>="Radio" <BR>输入方式为 
+              Radio，能产生一<FONT color=#ff0000>单一选择</FONT>，以供点选。 </SPAN>
+              <LI><SPAN><FONT color=#ff0000>name</FONT>="gender" <BR>此一 Radio 
+              名称，<FONT color=#0000ff>参考 Text 部分的说明</FONT>。 </SPAN>
+              <LI><SPAN><FONT color=#ff0000>value</FONT>="female" <BR>内定值。每一个 
+              radio 必须及仅有一个 value，通常有同时采用两个或以上<FONT color=#ff00ff>同 name 不同 
+              value</FONT> 的 Radio 输入方式，可让使用使任选其一。 </SPAN>
+              <LI><SPAN><FONT color=#ff0000>align</FONT>="MIDDLE" <BR>可选值：top, 
+              middle, bottom, left, right, texttop, baseline, absmiddle。 </SPAN>
+              <LI><SPAN><FONT color=#ff0000>checked</FONT> <BR>设该 Radio 为内定被选。同 
+              name 的各个 Radio 中只能有一个使用，或全不使用这 参数。 </SPAN></LI></UL>
+            <P><SPAN>例子： </SPAN>
+            <TABLE cellSpacing=0 cellPadding=2 width="100%" border=1>
+              
+              <TR>
+                <TD width="4%" bgColor=#0000b7><SPAN><FONT 
+                  color=#ffffff>原始码</FONT></SPAN></TD>
+                <TD vAlign=top bgColor=#ffffff><SPAN><FONT 
+                  color=#009b00>&lt;form 
+                  action="http://your.isp.com/cgi-local/example.cgi" 
+                  method="POST"&gt;</FONT> <BR>请选性别： <BR><FONT 
+                  color=#009595>&lt;input type="Radio" name="gender" 
+                  value="Female"&gt;</FONT>女性 <BR><FONT color=#009595>&lt;input 
+                  type="Radio" name="gender" value="Male" checked&gt;</FONT>男性 
+                  <BR><FONT color=#008000>&lt;br&gt;</FONT>你喜欢吗： <BR><FONT 
+                  color=#009595>&lt;input type="Radio" name="like" 
+                  value="Yes"&gt;</FONT>喜欢 <BR><FONT color=#009595>&lt;input 
+                  type="Radio" name="like" value="No"&gt;</FONT>不喜欢 <BR><FONT 
+                  color=#009595>&lt;input type="Radio" name="like" 
+                  value="NotSure"&gt;</FONT>不肯定 <BR><FONT 
+                  color=#009b00>&lt;/form&gt;</FONT> </SPAN></TD></TR>
+              <TR>
+                <TD width="4%" bgColor=#0000b7><SPAN><FONT 
+                  color=#ffffff>显示结果</FONT></SPAN></TD>
+                <TD bgColor=#ffffff>
+                  <FORM action=http://your.isp.com/cgi-local/example.cgi 
+                  method=post><SPAN>请选性别： <INPUT type=radio value=Female 
+                  name=gender> 女性 <INPUT type=radio CHECKED value=Male 
+                  name=gender> 男性 <BR>你喜欢吗： <INPUT type=radio value=Yes 
+                  name=like> 喜欢 <INPUT type=radio value=No name=like> 不喜欢 <INPUT 
+                  type=radio value=NotSure name=like> 不肯定 
+              </SPAN></FORM></TD></TR></TABLE>
+            <HR color=#ff0000 noShade SIZE=2>
+            <SPAN><A name=checkbox></A><FONT color=#ff00ff>输入方式三：</FONT> <FONT 
+            color=#ff0000>Checkbox</FONT> （确认盒） </SPAN>
+            <P><SPAN>例如：&lt;input <FONT color=#ff0000>type</FONT>="Checkbox" 
+            <FONT color=#ff0000>name</FONT>="idol" <FONT 
+            color=#ff0000>value</FONT>="Leon" <FONT 
+            color=#ff0000>align</FONT>="RIGHT" checked&gt; </SPAN>
+            <UL>
+              <LI><SPAN><FONT color=#ff0000>type</FONT>="Checkbox" <BR>输入方式为 
+              Checkbox，能产生一<FONT color=#ff0000>确认盒</FONT>，以供剔选。 </SPAN>
+              <LI><SPAN><FONT color=#ff0000>name</FONT>="idol" <BR>此一 Checkbox 
+              名称，<FONT color=#0000ff>参考 Text 部分的说明</FONT>。 </SPAN>
+              <LI><SPAN><FONT color=#ff0000>value</FONT>="Leon" <BR>内定值。每一个 
+              Checkbox 必须及仅有一个 value，当被剔选时这值便会传及 CGI，例如所传字串 idol=Leon 。 </SPAN>
+              <LI><SPAN><FONT color=#ff0000>align</FONT>="RIGHT" <BR>可选值：top, 
+              middle, bottom, left, right, texttop, baseline, absmiddle。 </SPAN>
+              <LI><SPAN><FONT color=#ff0000>checked</FONT> <BR>设该 Checkbox 
+              为内定被选。每个 Checkbox 都是独立的，所以每一个都可使用这 参数，不像 Radio。 </SPAN></LI></UL>
+            <P><SPAN>例子： </SPAN>
+            <TABLE cellSpacing=0 cellPadding=2 width="100%" border=1>
+              
+              <TR>
+                <TD width="4%" bgColor=#0000b7><SPAN><FONT 
+                  color=#ffffff>原始码</FONT></SPAN></TD>
+                <TD vAlign=top bgColor=#ffffff><SPAN><FONT 
+                  color=#009b00>&lt;form 
+                  action="http://your.isp.com/cgi-local/example.cgi" 
+                  method="POST"&gt;</FONT> <BR>你喜欢以下那些明星： <BR><FONT 
+                  color=#008000>&lt;br&gt;</FONT><FONT color=#009595>&lt;input 
+                  type="Checkbox" name="idol01" value="Leon"&gt;</FONT>黎明 
+                  <BR><FONT color=#009595>&lt;input type="Checkbox" 
+                  name="idol02" value="Noriko_Sagai"&gt;</FONT>酒井法子 <BR><FONT 
+                  color=#009595>&lt;input type="Checkbox" name="idol03" 
+                  value="Leon"&gt;</FONT>郑秀文 <BR><FONT color=#009595>&lt;input 
+                  type="Checkbox" name="idol04" value="BonJovi" 
+                  checked&gt;</FONT>BonJovi <BR><FONT 
+                  color=#009b00>&lt;/form&gt;</FONT> </SPAN></TD></TR>
+              <TR>
+                <TD width="4%" bgColor=#0000b7><SPAN><FONT 
+                  color=#ffffff>显示结果</FONT></SPAN></TD>
+                <TD bgColor=#ffffff>
+                  <FORM action=http://your.isp.com/cgi-local/example.cgi 
+                  method=post><SPAN>你喜欢以下那些明星： <BR><INPUT type=checkbox 
+                  value=Leon name=idol01> 黎明 <INPUT type=checkbox 
+                  value=Noriko_Sagai name=idol02> 酒井法子 <INPUT type=checkbox 
+                  value=Leon name=idol03> 郑秀文 <INPUT type=checkbox CHECKED 
+                  value=BonJovi name=idol04> BonJovi 
+            </SPAN></FORM></TD></TR></TABLE>
+            <HR color=#ff0000 noShade SIZE=2>
+            <SPAN><A name=password></A><FONT color=#ff00ff>输入方式四：</FONT> <FONT 
+            color=#ff0000>Password</FONT> （密码输方盒） </SPAN>
+            <P><SPAN>例如：&lt;input <FONT color=#ff0000>type</FONT>="Password" 
+            <FONT color=#ff0000>name</FONT>="pw" <FONT 
+            color=#ff0000>value</FONT>="999" <FONT 
+            color=#ff0000>align</FONT>="MIDDLE" <FONT 
+            color=#ff0000>size</FONT>="5" <FONT 
+            color=#ff0000>maxlength</FONT>="9"&gt; </SPAN>
+            <UL>
+              <LI><SPAN>Password 的其他参数和 Text 是完全相同的，<FONT color=#0000ff>请参考 Text 
+              的介绍</FONT>。 <BR>两者作用不同，Password 所输入的字元全以<FONT color=#ff0000> * 
+              </FONT>号表示。 </SPAN></LI></UL>
+            <P><SPAN>例子： </SPAN>
+            <TABLE cellSpacing=0 cellPadding=2 width="100%" border=1>
+              
+              <TR>
+                <TD width="4%" bgColor=#0000b7><SPAN><FONT 
+                  color=#ffffff>原始码</FONT></SPAN></TD>
+                <TD vAlign=top bgColor=#ffffff><SPAN><FONT 
+                  color=#009b00>&lt;form 
+                  action="http://your.isp.com/cgi-local/example.cgi" 
+                  method="POST"&gt;</FONT> <BR>请输入姓名：<FONT 
+                  color=#009595>&lt;input type="Text" name="name"&gt;</FONT> 
+                  <BR><FONT color=#009b00>&lt;br&gt;</FONT>请输入密码：<FONT 
+                  color=#009595>&lt;input type="Password" name="pw" 
+                  maxlength="9"&gt;</FONT> <BR><FONT 
+                  color=#009b00>&lt;/form&gt;</FONT> </SPAN></TD></TR>
+              <TR>
+                <TD width="4%" bgColor=#0000b7><SPAN><FONT 
+                  color=#ffffff>显示结果</FONT></SPAN></TD>
+                <TD bgColor=#ffffff>
+                  <FORM action=http://your.isp.com/cgi-local/example.cgi 
+                  method=post><SPAN>请输入姓名： <INPUT name=name> <BR>请输入密码： <INPUT 
+                  type=password maxLength=9 name=pw> 
+            </SPAN></FORM></TD></TR></TABLE>
+            <HR color=#ff0000 noShade SIZE=2>
+            <SPAN><A name=submit></A><FONT color=#ff00ff>输入方式五：</FONT> <FONT 
+            color=#ff0000>Submit</FONT> （传送键）及 <FONT color=#ff0000>Reset</FONT> 
+            （清除键） </SPAN>
+            <P><SPAN>这是表单上重要的两个按键，两者所附带的参数相同，但用处不大。 </SPAN>
+            <P><SPAN>例如：&lt;input <FONT color=#ff0000>type</FONT>="Submit" <FONT 
+            color=#ff0000>name</FONT>="other_funtion" <FONT 
+            color=#ff0000>value</FONT>="确定" <FONT 
+            color=#ff0000>align</FONT>="MIDDLE"&gt; <BR>&lt;input <FONT 
+            color=#ff0000>type</FONT>="Reset" <FONT 
+            color=#ff0000>value</FONT>="清除" <FONT 
+            color=#ff0000>align</FONT>="MIDDLE"&gt; </SPAN>
+            <UL>
+              <LI><SPAN><FONT color=#ff0000>type</FONT>="Submit" <BR>设定输入方式为 
+              Submit 或 Reset。 </SPAN>
+              <LI><SPAN><FONT color=#ff0000>name</FONT>="other_funtion" 
+              <BR>Submit 的功能随 name 的不同而不同，须和 CGI 配合。若你只需要普通的传送 键，则是其内定，不必用此参数。 
+              </SPAN>
+              <LI><SPAN><FONT color=#ff0000>value</FONT>="确定" <BR>这个值不是输给 CGI 
+              的，而是显示在按键上，可以不用，传送键的内定值为 <FONT color=#ff00ff>Submit 
+              Query</FONT>，清除键的内定值为 <FONT color=#ff00ff>Reset</FONT>。 </SPAN>
+              <LI><SPAN><FONT color=#ff0000>align</FONT>="MIDDLE" <BR>可选值：top, 
+              middle, bottom, left, right, texttop, baseline, absmiddle。 
+              </SPAN></LI></UL>
+            <P><SPAN>例子： </SPAN>
+            <TABLE cellSpacing=0 cellPadding=2 width="100%" border=1>
+              
+              <TR>
+                <TD width="4%" bgColor=#0000b7><SPAN><FONT 
+                  color=#ffffff>原始码</FONT></SPAN></TD>
+                <TD vAlign=top bgColor=#ffffff><SPAN><FONT 
+                  color=#009b00>&lt;form 
+                  action="http://your.isp.com/cgi-local/example.cgi" 
+                  method="POST"&gt;</FONT> <BR><FONT color=#009595>&lt;input 
+                  type="Submit"&gt;&lt;input type="Reset"&gt;</FONT> <BR><FONT 
+                  color=#009b00>&lt;br&gt;</FONT><FONT color=#009595>&lt;input 
+                  type="Submit" value=" &nbsp; &nbsp; &nbsp; &nbsp; 确定 &nbsp; 
+                  &nbsp; &nbsp; &nbsp; "&gt;&lt;input type="Reset" 
+                  value="清除"&gt;</FONT> <BR><FONT 
+                  color=#009b00>&lt;/form&gt;</FONT> </SPAN></TD></TR>
+              <TR>
+                <TD width="4%" bgColor=#0000b7><SPAN><FONT 
+                  color=#ffffff>显示结果</FONT></SPAN></TD>
+                <TD bgColor=#ffffff>
+                  <DIV style="FONT-SIZE: 9pt; FONT-FAMILY: 新细明体">
+                  <FORM action=http://your.isp.com/cgi-local/example.cgi 
+                  method=post><INPUT type=submit value=提交查询内容 name=submit> <INPUT type=reset value=重置 name=reset> <BR><INPUT type=submit value="       确定       " name=submit> <INPUT type=reset value=清除 name=reset> 
+              </FORM></DIV></TD></TR></TABLE>
+            <HR color=#ff0000 noShade SIZE=2>
+            <SPAN><A name=image></A><FONT color=#ff00ff>输入方式六：</FONT> <FONT 
+            color=#ff0000>Image</FONT> （图片按键） </SPAN>
+            <P><SPAN>这通常用以取代 Submit 及 Reset 两个按键，因为由程式产生的按键并不漂亮，这 Image 参 
+            数便容许你采用自已制造的按键。 </SPAN>
+            <P><SPAN>例如：&lt;input <FONT color=#ff0000>type</FONT>="Image" <FONT 
+            color=#ff0000>name</FONT>="submit" <FONT 
+            color=#ff0000>align</FONT>="BOTTOM" <FONT 
+            color=#ff0000>src</FONT>="ex_icon.gif"&gt; </SPAN>
+            <UL>
+              <LI><SPAN><FONT color=#ff0000>type</FONT>="Image" <BR>输入方式为 Image。 
+              </SPAN>
+              <LI><SPAN><FONT color=#ff0000>name</FONT>="submit" <BR>所要代表的按键，可以是 
+              submit, reset, 或其它。 </SPAN>
+              <LI><SPAN><FONT color=#ff0000>align</FONT>="BOTTOM" <BR>可选值：top, 
+              middle, bottom, left, right, texttop, baseline, absmiddle。 </SPAN>
+              <LI><SPAN><FONT color=#ff0000>src</FONT>="ex_icon.gif" 
+              <BR>按键图片来源，若此图片文件不与该 html 文件在同一目录下，请加上相对或绝对途 径。 </SPAN></LI></UL>
+            <P><SPAN>例子： </SPAN>
+            <TABLE cellSpacing=0 cellPadding=2 width="100%" border=1>
+              
+              <TR>
+                <TD width="4%" bgColor=#0000b7><SPAN><FONT 
+                  color=#ffffff>原始码</FONT></SPAN></TD>
+                <TD vAlign=top bgColor=#ffffff><SPAN><FONT 
+                  color=#009b00>&lt;form 
+                  action="http://your.isp.com/cgi-local/example.cgi" 
+                  method="POST"&gt;</FONT> <BR><FONT color=#009595>&lt;input 
+                  type="Image" name="submit" align="BOTTOM" 
+                  src="ex_icon.gif"&gt;</FONT> <BR><FONT 
+                  color=#009b00>&lt;/form&gt;</FONT> </SPAN></TD></TR>
+              <TR>
+                <TD width="4%" bgColor=#0000b7><SPAN><FONT 
+                  color=#ffffff>显示结果</FONT></SPAN></TD>
+                <TD bgColor=#ffffff>
+                  <FORM action=http://your.isp.com/cgi-local/example.cgi 
+                  method=post><SPAN><INPUT type=image height=33 width=104 
+                  src="ex_icon.gif" align=bottom name=submit> 
+              </SPAN></FORM></TD></TR></TABLE>
+            <HR color=#ff0000 noShade SIZE=2>
+            <SPAN><A name=file></A><FONT color=#ff00ff>输入方式七：</FONT> <FONT 
+            color=#ff0000>File</FONT> </SPAN>
+            <P><SPAN>例如：&lt;input <FONT color=#ff0000>type</FONT>="File" <FONT 
+            color=#ff0000>name</FONT>="upload" <FONT 
+            color=#ff0000>align</FONT>="BOTTOM" <FONT 
+            color=#ff0000>size</FONT>="20" <FONT 
+            color=#ff0000>maxlength</FONT>="100" <FONT 
+            color=#ff0000>accept</FONT>="text/html"&gt; </SPAN>
+            <UL>
+              <LI><SPAN>input <FONT color=#ff0000>type</FONT>="File" <BR>输入方式为 
+              Image。通常用以传输文件。 </SPAN>
+              <LI><SPAN><FONT color=#ff0000>name</FONT>="upload" 
+              <BR>这文件传输的名称，用以识别之用。 </SPAN>
+              <LI><SPAN><FONT color=#ff0000>align</FONT>="BOTTOM" <BR>可选值：top, 
+              middle, bottom, left, right, texttop, baseline, absmiddle。 </SPAN>
+              <LI><SPAN><FONT color=#ff0000>size</FONT>="20" <BR>所显示文字盒的长度。 
+              </SPAN>
+              <LI><SPAN><FONT color=#ff0000>maxlength</FONT>="100" <BR>可输入字元的上限。 
+              </SPAN>
+              <LI><SPAN><FONT color=#ff0000>accept</FONT>="text/html" 
+              <BR>所接受的文件类别，有二十六种选择，但可不设定。 </SPAN></LI></UL>
+            <P><SPAN>例子： </SPAN>
+            <TABLE cellSpacing=0 cellPadding=2 width="100%" border=1>
+              
+              <TR>
+                <TD width="4%" bgColor=#0000b7><SPAN><FONT 
+                  color=#ffffff>原始码</FONT></SPAN></TD>
+                <TD vAlign=top bgColor=#ffffff><SPAN><FONT 
+                  color=#009b00>&lt;form 
+                  action="http://your.isp.com/cgi-local/example.cgi" 
+                  method="POST"&gt;</FONT> <BR><FONT 
+                  color=#009595>&lt;type="File" name="upload" size="30" 
+                  maxlength="100" accept="text/html"&gt;</FONT> <BR><FONT 
+                  color=#009b00>&lt;/form&gt;</FONT> </SPAN></TD></TR>
+              <TR>
+                <TD width="4%" bgColor=#0000b7><SPAN><FONT 
+                  color=#ffffff>显示结果</FONT></SPAN></TD>
+                <TD bgColor=#ffffff>
+                  <FORM action=http://your.isp.com/cgi-local/example.cgi 
+                  method=post><SPAN><INPUT type=file maxLength=100 
+                  accept=text/html size=30 name=upload> 
+              </SPAN></FORM></TD></TR></TABLE>
+            <HR color=#ff0000 noShade SIZE=2>
+            <SPAN><A name=hidden></A><FONT color=#ff00ff>输入方式八：</FONT> <FONT 
+            color=#ff0000>Hidden</FONT> </SPAN>
+            <P><SPAN>例如：&lt;input <FONT color=#ff0000>type</FONT>="Hidden" <FONT 
+            color=#ff0000>name</FONT>="ID" <FONT 
+            color=#ff0000>value</FONT>="6618"&gt; </SPAN>
+            <UL>
+              <LI><SPAN><FONT color=#ff0000>type</FONT>="Hidden" 
+              <BR>输入方式为隐藏或内定。它不会显示任何输入介面，而是一个内定值随表单一起 传给 CGI，列如由 CGI 
+              产生的会员号码，或传入可更改的参数以调整 CGI 而避免 修改 CGI 程式码。 </SPAN>
+              <LI><SPAN><FONT color=#ff0000>name</FONT>="ID" 
+              <BR>这文件传输的名称，用以识别之用。 </SPAN>
+              <LI><SPAN><FONT color=#ff0000>value</FONT>="6618" <BR>内定值，会以如 
+              ID=6618 形式传给 CGI。 </SPAN></LI></UL>
+            <P><SPAN>例子： （"Hidden" 是不被显示的，所以这处多放了一个 "Submit" 键，表示 Hidden 之内定 值会随 
+            submit 键被按而传给 CGI） </SPAN>
+            <TABLE cellSpacing=0 cellPadding=2 width="100%" border=1>
+              
+              <TR>
+                <TD width="4%" bgColor=#0000b7><SPAN><FONT 
+                  color=#ffffff>原始码</FONT></SPAN></TD>
+                <TD vAlign=top bgColor=#ffffff><SPAN><FONT 
+                  color=#009b00>&lt;form 
+                  action="http://your.isp.com/cgi-local/example.cgi" 
+                  method="POST"&gt;</FONT> <BR><FONT color=#009595>&lt;input 
+                  type="Hidden" name="ID" value="6618"&gt;</FONT> <BR><FONT 
+                  color=#009595>&lt;input type="Submit" 
+                  value="Submit"&gt;</FONT> <BR><FONT 
+                  color=#009b00>&lt;/form&gt;</FONT> </SPAN></TD></TR>
+              <TR>
+                <TD width="4%" bgColor=#0000b7><SPAN><FONT 
+                  color=#ffffff>显示结果</FONT></SPAN></TD>
+                <TD bgColor=#ffffff>
+                  <FORM action=http://your.isp.com/cgi-local/example.cgi 
+                  method=post><SPAN><INPUT type=hidden value=6618 name=ID> <INPUT type=submit value=Submit name=submit> 
+              </SPAN></FORM></TD></TR></TABLE>
+            <HR color=#ff0000 noShade SIZE=2>
+            <SPAN><A name=button></A><FONT color=#ff00ff>输入方式九：</FONT> <FONT 
+            color=#ff0000>Button</FONT> </SPAN>
+            <P><SPAN>例如：&lt;input <FONT color=#ff0000>type</FONT>="Button" <FONT 
+            color=#ff0000>name</FONT>="useless" <FONT 
+            color=#ff0000>value</FONT>="Back"&gt; </SPAN>
+            <UL>
+              <LI><SPAN><FONT color=#ff0000>type</FONT>="Button" 
+              <BR>输入方式为一般按键。常配合 Java Script 作为其启动按键。 </SPAN>
+              <LI><SPAN><FONT color=#ff0000>name</FONT>="useless" 
+              <BR>这文件传输的名称，用处不大。 </SPAN>
+              <LI><SPAN><FONT color=#ff0000>value</FONT>="Back" <BR>按键显示名称。 
+              </SPAN></LI></UL>
+            <P><SPAN>例子： 其中 <FONT color=#0000ff>onclick="history.go( -1 );return 
+            true;</FONT> 属 JAVA 事件。 </SPAN>
+            <TABLE cellSpacing=0 cellPadding=2 width="100%" border=1>
+              
+              <TR>
+                <TD width="4%" bgColor=#0000b7><SPAN><FONT 
+                  color=#ffffff>原始码</FONT></SPAN></TD>
+                <TD vAlign=top bgColor=#ffffff><SPAN><FONT 
+                  color=#009b00>&lt;form&gt;</FONT> <BR><FONT 
+                  color=#009595>&lt;input type="Button" value="回前一页" 
+                  onclick="history.go( -1 );return true;"&gt;</FONT> <BR><FONT 
+                  color=#009b00>&lt;/form&gt;</FONT> </SPAN></TD></TR>
+              <TR>
+                <TD width="4%" bgColor=#0000b7><SPAN><FONT 
+                  color=#ffffff>显示结果</FONT></SPAN></TD>
+                <TD bgColor=#ffffff>
+                  <FORM><SPAN><INPUT onclick="history.go( -1 );return true;" type=button value=回前一页 name=button> 
+                  </SPAN></FORM></TD></TR></TABLE>
+            <P></P></TD></TR>
+        <TR>
+          <TD class=article bgColor=#bbd1d1>
+            <TABLE cellSpacing=0 cellPadding=0 width="100%" align=center>
+              
+              <TR>
+                <TD>
+                  <DIV style="FONT-SIZE: 9pt; FONT-FAMILY: 新细明体"><FONT 
+                  color=#ca00ca><A name=2><U>■ &lt;SELECT&gt; &lt;OPTION&gt; 
+                  ：</U></A></FONT></DIV></TD>
+                <TD align=right>
+                  <DIV style="FONT-SIZE: 9pt; FONT-FAMILY: 新细明体"><A 
+                  href="#top">▲Top</A></DIV></TD></TR></TABLE></TD></TR>
+        <TR>
+          <TD class=article><SPAN>&lt;SELECT&gt;是<FONT 
+            color=#ff0000>卷动选单</FONT>标记，每一选项皆由 &lt;OPTION&gt; 所标示，把它当作围堵标记或空标 
+            记使用都可以。 </SPAN>
+            <P><SPAN>&lt;SELECT&gt; 的参数设定（常用）： <BR>例如： &lt;select <FONT 
+            color=#ff0000>name</FONT>="where" <FONT 
+            color=#ff0000>size</FONT>="6" <FONT 
+            color=#ff0000>multiple</FONT>&gt; </SPAN>
+            <UL>
+              <LI><SPAN><FONT color=#ff0000>name</FONT>="where" 
+              <BR>这卷动选单的名称，作识别之用，将会传及 CGI。 </SPAN>
+              <LI><SPAN><FONT color=#ff0000>size</FONT>="6" 
+              <BR>这卷动选单的列数，即其高度，请自行修改。若使用此参数则不会有 Pop Up 效 果。 </SPAN>
+              <LI><SPAN><FONT color=#ff0000>multiple</FONT> <BR>令这卷动选单容许多重选择。 
+              </SPAN></LI></UL>
+            <P><SPAN>&lt;OPTION&gt; 的参数设定（常用）： <BR>例如： &lt;option <FONT 
+            color=#ff0000>value</FONT>="tw" <FONT 
+            color=#ff0000>selected</FONT>&gt; </SPAN>
+            <UL>
+              <LI><SPAN><FONT color=#ff0000>value</FONT>="tw" <BR>这选项的值，将会传及 
+              CGI。请自行修改，但不同选项必须有不同的值。 </SPAN>
+              <LI><SPAN><FONT color=#ff0000>selected</FONT> 
+              <BR>设该选项为内定被选。一个单选卷动选单只能有一项或零可内定被选。 </SPAN></LI></UL>
+            <P><SPAN>例子一： （普通 POP UP 卷动选单）</SPAN> 
+            <TABLE cellSpacing=0 cellPadding=2 width="100%" border=1>
+              
+              <TR>
+                <TD width="4%" bgColor=#0000b7><SPAN><FONT 
+                  color=#ffffff>原始码</FONT></SPAN></TD>
+                <TD vAlign=top bgColor=#ffffff><SPAN><FONT 
+                  color=#009b00>&lt;form 
+                  action="http://your.isp.com/cgi-local/example.cgi" 
+                  method="POST"&gt;</FONT> Where you com from? <BR><FONT 
+                  color=#ff80c0>&lt;select name="where"&gt;</FONT> <BR><FONT 
+                  color=#009595>&lt;option value="hk"&gt;</FONT>Hong Kong<FONT 
+                  color=#009595>&lt;/option&gt;</FONT> <BR><FONT 
+                  color=#009595>&lt;option value="tw" 
+                  selected&gt;</FONT>Taiwan<FONT 
+                  color=#009595>&lt;/option&gt;</FONT> <BR><FONT 
+                  color=#009595>&lt;option value="cn"&gt;</FONT>China<FONT 
+                  color=#009595>&lt;/option&gt;</FONT> <BR><FONT 
+                  color=#009595>&lt;option value="us"&gt;</FONT>United 
+                  States<FONT color=#009595>&lt;/option&gt;</FONT> <BR><FONT 
+                  color=#009595>&lt;option value="ca"&gt;</FONT>Canada<FONT 
+                  color=#009595>&lt;/option&gt;</FONT> <BR><FONT 
+                  color=#ff80c0>&lt;/select&gt;</FONT> <BR><FONT 
+                  color=#009b00>&lt;/form&gt;</FONT> </SPAN></TD></TR>
+              <TR>
+                <TD width="4%" bgColor=#0000b7><SPAN><FONT 
+                  color=#ffffff>显示结果</FONT></SPAN></TD>
+                <TD bgColor=#ffffff>
+                  <DIV style="FONT-SIZE: 9pt; FONT-FAMILY: 新细明体">
+                  <FORM action=http://your.isp.com/cgi-local/example.cgi 
+                  method=post>Where you com from? <BR><SELECT name=where> 
+                    <OPTION value=hk>Hong Kong</OPTION> <OPTION value=tw 
+                    selected>Taiwan</OPTION> <OPTION value=cn>China</OPTION> 
+                    <OPTION value=us>United States</OPTION> <OPTION 
+                    value=ca>Canada</OPTION></SELECT> 
+            </FORM></DIV></TD></TR></TABLE>
+            <P><SPAN>例子二： （容许多重选择 的卷动选单）</SPAN> 
+            <TABLE cellSpacing=0 cellPadding=2 width="100%" border=1>
+              
+              <TR>
+                <TD width="4%" bgColor=#0000b7><SPAN><FONT 
+                  color=#ffffff>原始码</FONT></SPAN></TD>
+                <TD vAlign=top bgColor=#ffffff><SPAN><FONT 
+                  color=#009b00>&lt;form 
+                  action="http://your.isp.com/cgi-local/example.cgi" 
+                  method="POST"&gt;</FONT> Where you com from? <BR><FONT 
+                  color=#ff80c0>&lt;select name="where" <FONT 
+                  color=#ff0000>multiple</FONT>&gt;</FONT> <BR><FONT 
+                  color=#009595>&lt;option value="hk"&gt;</FONT>Hong Kong<FONT 
+                  color=#009595>&lt;/option&gt;</FONT> <BR><FONT 
+                  color=#009595>&lt;option value="tw" 
+                  selected&gt;</FONT>Taiwan<FONT 
+                  color=#009595>&lt;/option&gt;</FONT> <BR><FONT 
+                  color=#009595>&lt;option value="cn"&gt;</FONT>China<FONT 
+                  color=#009595>&lt;/option&gt;</FONT> <BR><FONT 
+                  color=#009595>&lt;option value="us"&gt;</FONT>United 
+                  States<FONT color=#009595>&lt;/option&gt;</FONT> <BR><FONT 
+                  color=#009595>&lt;option value="ca"&gt;</FONT>Canada<FONT 
+                  color=#009595>&lt;/option&gt;</FONT> <BR><FONT 
+                  color=#ff80c0>&lt;/select&gt;</FONT> <BR><FONT 
+                  color=#009b00>&lt;/form&gt;</FONT> </SPAN></TD></TR>
+              <TR>
+                <TD width="4%" bgColor=#0000b7><SPAN><FONT 
+                  color=#ffffff>显示结果</FONT></SPAN></TD>
+                <TD bgColor=#ffffff>
+                  <DIV style="FONT-SIZE: 9pt; FONT-FAMILY: 新细明体">
+                  <FORM action=http://your.isp.com/cgi-local/example.cgi 
+                  method=post>Where you com from? <BR><SELECT multiple 
+                  name=where> <OPTION value=hk>Hong Kong</OPTION> <OPTION 
+                    value=tw selected>Taiwan</OPTION> <OPTION 
+                    value=cn>China</OPTION> <OPTION value=us>United 
+                    States</OPTION> <OPTION value=ca>Canada</OPTION></SELECT> 
+                  </FORM></DIV></TD></TR></TABLE>
+            <P><SPAN>例子三：（设定了 Size 的卷动选单）</SPAN> 
+            <TABLE cellSpacing=0 cellPadding=2 width="100%" border=1>
+              
+              <TR>
+                <TD width="4%" bgColor=#0000b7><SPAN><FONT 
+                  color=#ffffff>原始码</FONT></SPAN></TD>
+                <TD vAlign=top bgColor=#ffffff height=60><SPAN><FONT 
+                  color=#009b00>&lt;form 
+                  action="http://your.isp.com/cgi-local/example.cgi" 
+                  method="POST"&gt;</FONT> Where you com from? <BR><FONT 
+                  color=#ff80c0>&lt;select name="where" <FONT 
+                  color=#ff0000>size="5"</FONT>&gt;</FONT> <BR><FONT 
+                  color=#009595>&lt;option value="hk"&gt;</FONT>Hong Kong<FONT 
+                  color=#009595>&lt;/option&gt;</FONT> <BR><FONT 
+                  color=#009595>&lt;option value="tw" 
+                  selected&gt;</FONT>Taiwan<FONT 
+                  color=#009595>&lt;/option&gt;</FONT> <BR><FONT 
+                  color=#009595>&lt;option value="cn"&gt;</FONT>China<FONT 
+                  color=#009595>&lt;/option&gt;</FONT> <BR><FONT 
+                  color=#009595>&lt;option value="us"&gt;</FONT>United 
+                  States<FONT color=#009595>&lt;/option&gt;</FONT> <BR><FONT 
+                  color=#009595>&lt;option value="ca"&gt;</FONT>Canada<FONT 
+                  color=#009595>&lt;/option&gt;</FONT> <BR><FONT 
+                  color=#ff80c0>&lt;/select&gt;</FONT> <BR><FONT 
+                  color=#009b00>&lt;/form&gt;</FONT> </SPAN></TD></TR>
+              <TR>
+                <TD width="4%" bgColor=#0000b7><SPAN><FONT 
+                  color=#ffffff>显示结果</FONT></SPAN></TD>
+                <TD bgColor=#ffffff>
+                  <DIV style="FONT-SIZE: 9pt; FONT-FAMILY: 新细明体">
+                  <FORM action=http://your.isp.com/cgi-local/example.cgi 
+                  method=post>Where you com from? <BR><SELECT size=5 name=where> 
+                    <OPTION value=hk>Hong Kong</OPTION> <OPTION value=tw 
+                    selected>Taiwan</OPTION> <OPTION value=cn>China</OPTION> 
+                    <OPTION value=us>United States</OPTION> <OPTION 
+                    value=ca>Canada</OPTION></SELECT> 
+            </FORM></DIV></TD></TR></TABLE>
+            <P></P></TD></TR>
+        <TR>
+          <TD class=article bgColor=#bbd1d1>
+            <TABLE cellSpacing=0 cellPadding=0 width="100%" align=center>
+              
+              <TR>
+                <TD>
+                  <DIV style="FONT-SIZE: 9pt; FONT-FAMILY: 新细明体"><FONT 
+                  color=#ca00ca><A name=3><U>■</U></A> &lt;TEXTAREA&gt; 
+                  ：</FONT></DIV></TD>
+                <TD align=right>
+                  <DIV style="FONT-SIZE: 9pt; FONT-FAMILY: 新细明体"><A 
+                  href="#top">▲Top</A></DIV></TD></TR></TABLE></TD></TR>
+        <TR>
+          <TD class=article><SPAN>&lt;TEXTAREA&gt;是<FONT 
+            color=#ff0000>表单文字区块</FONT>标记，常用于 bug report, feedback 等需要填写大量资料的用 
+            途。 </SPAN>
+            <P><SPAN>&lt;TEXTAREA&gt; 的参数设定（常用）： <BR>例如： &lt;textarea <FONT 
+            color=#ff0000>name</FONT>="comments" <FONT 
+            color=#ff0000>cols</FONT>="40" <FONT color=#ff0000>rows</FONT>="4" 
+            <FONT color=#ff0000>wrap</FONT>="VIRTUAL"&gt; </SPAN>
+            <UL>
+              <LI><SPAN><FONT color=#ff0000>name</FONT>="comments" 
+              <BR>这文字区块的名称，作识别之用，将会传及 CGI。 </SPAN>
+              <LI><SPAN><FONT color=#ff0000>cols</FONT>="40" <BR>这文字区块的宽度，请自行修改。 
+              </SPAN>
+              <LI><SPAN><FONT color=#ff0000>rows</FONT>="4" 
+              <BR>这文字区块的列数，即其高度，请自行修改。 </SPAN>
+              <LI><SPAN><FONT color=#ff0000>wrap</FONT>="VIRTUAL" 
+              <BR>设定其折行问题，可选值为： <FONT color=#ff0000>off</FONT>, <FONT 
+              color=#ff0000>physical</FONT>, <FONT 
+              color=#ff0000>virtual</FONT>。off 表示不使用此属性，physical 时则会强迫刘览器在送资料到 
+              CGI（Web 伺服器端）必须将实№文字中的换行一 并送出，设为 virtual 时则送出连续成串的字（除非使用者按了键盘的 
+              RETURN / ENTER）。 </SPAN></LI></UL>
+            <P><SPAN>例子： </SPAN>
+            <TABLE cellSpacing=0 cellPadding=2 width="100%" border=1>
+              
+              <TR>
+                <TD width="4%" bgColor=#0000b7><SPAN><FONT 
+                  color=#ffffff>原始码</FONT></SPAN></TD>
+                <TD vAlign=top bgColor=#ffffff><SPAN><FONT 
+                  color=#009b00>&lt;form 
+                  action="http://your.isp.com/cgi-local/example.cgi" 
+                  method="POST"&gt;</FONT> <BR>Give comments: <BR><FONT 
+                  color=#009595>&lt;textarea name="comments" cols="40" rows="4" 
+                  wrap="VIRTUAL"&gt;</FONT> <BR>这是预设的字句，通常留空的，随你喜欢。<FONT 
+                  color=#009595>&lt;/textarea&gt;</FONT> <BR><FONT 
+                  color=#009b00>&lt;/form&gt;</FONT> </SPAN></TD></TR>
+              <TR>
+                <TD width="4%" bgColor=#0000b7><SPAN><FONT 
+                  color=#ffffff>显示结果</FONT></SPAN></TD>
+                <TD bgColor=#ffffff>
+                  <DIV style="FONT-SIZE: 9pt; FONT-FAMILY: 新细明体">
+                  <FORM action=http://your.isp.com/cgi-local/example.cgi 
+                  method=post>Give comments: <BR><TEXTAREA name=comments rows=4 wrap=VIRTUAL cols=40>这是预设的字句，通常留空的，随你喜欢。</TEXTAREA> 
+                  </FORM></DIV></TD></TR></TABLE></P></TD></TR></TBODY></TABLE><SPAN 
+      class=large><FONT 
+  color=#000000></FONT></SPAN><!-- #EndEditable --><BR></TD></TR></TABLE></b></font></span></p>
+
+</body>
+
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=gb2312">
+<META name="GENERATOR" content="QuickCHM">
+<TITLE>大学生结构模型参赛手册</TITLE>
+<link href="css/style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/popup.js"></script>
+<style type="text/css">
+*{margin:0;padding:0;list-style-type:none;}
+a,img{border:0;}
+/* acttabbox */
+.acttabbox{width:990px;height:300px;overflow:hidden;padding:4px;border:solid 1px #690501;background:#541410;margin:40px auto;}
+.tabcon{float:left;width:702px;height:300px;overflow:hidden;margin-right:-2px;} 
+.tabcon li{width:702px;height:300px;}
+.tabcon li img{width:702px;height:300px;float:left}
+.tabnav{float:right;width:290px;}
+.tabnav li{float:left;position:relative;margin:-1px 0 0 0;height:99px;border:1px solid #000;overflow:hidden;}
+.tabnav .cur{border:1px solid #fff;z-index:9;}
+</style>
+</HEAD>
+<BODY>
+<div class="acttabbox">
+	<ul class="tabcon">
+		<li><a href="http://www.cimai.com.cn/" target="_blank"><img width="702" height="300" src="img/awards/model1.jpg" alt="获奖" /></a></li>
+		<li><a href="http://www.cimai.com.cn/" target="_blank"><img width="702" height="300" src="img/xiaosai.jpg" alt="赛场" /></a></li>
+		<li><a href="http://www.cimai.com.cn/" target="_blank"><img width="702" height="300" src="img/loadapplying/model1.jpg" alt="加载" /></a></li>
+	</ul>
+	<ul class="tabnav">
+		<li class="cur"><a href="http://www.cimai.com.cn/" target="_blank"><img width="288" height="99" src="img/awards/model1.jpg" alt="获奖" /></a></li>
+		<li><a href="http://www.cimai.com.cn/" target="_blank"><img width="288" height="99" src="img/xiaosai.jpg" alt="赛场" /></a></li>	
+		<li><a href="http://www.cimai.com.cn/" target="_blank"><img width="288" height="99" src="img/loadapplying/model1.jpg" alt="加载" /></a></li>
+	</ul> 
+</div>
+
+
+<script type="text/javascript">
+$(function(){    
+
+	var index=0,len=$('.tabnav li').length,_timer=null;  
+	
+	function showTab(index){			
+		$('.tabnav li').eq(index).addClass('cur').siblings().removeClass('cur');				 
+		$('.tabcon li').eq(index).stop(true,true).slideDown('slow').siblings().slideUp('slow');
+	}
+	
+	function auto(){
+		timer=setTimeout(function(){
+			index=(index+1)%len;
+			showTab(index);
+			timer=setTimeout(arguments.callee,3500);
+		},1000)	
+	}
+	
+	auto(); 
+	
+	$('.tabnav li').mouseenter(function(){
+		var index=$(this).index(); 
+		showTab(index);	 
+	});
+	
+	$('.acttabbox').hover(function(){
+		clearTimeout(timer);
+	},function(){
+		auto();
+	});
+	
+});
+</script>
+
+<P style="MARGIN-RIGHT: 0px" align=left><FONT face=幼圆 size=5>&nbsp;&nbsp; 
+为了快速提高参赛选手在大学生结构设计竞赛上的竞争力，由我校参加河南地区第三届和第九届大学生结构设计竞赛的指导老师和比赛选手组成编写小组，编制了
+《大学生结构选型设计与制作参考手册》。</br>在编制过程中，总结了河南地区第九届大学生结构设计竞赛的比赛经验、参赛作品及模型的制作技巧。</br>
+结构选型是从整体上把握选择确定结构的受力体系，合理的结构体系传力路径明确结构受力合理，良好的结构选型能使得后期的设计工作事半功倍。要选择合适的结构体系，往往需要结构工程师具备丰富的工作经验和工程阅历，能从各种各样的结构体系中选出适合具体某一个工程项目的结构形式。因此，为了丰富同学们的结构视野、认知更多的结构形式，我们根据往年的比赛经验，把往年参加比赛的各种结构形式的作品展示出来，方便同学们参考，丰富开拓同学们的结构视野。为以后比赛中自己在结构选型中得心应手选择自己合适的作品和结构设计方案。
+本参考手册从结构选型、初步设计、对杆件性能和模型制作技巧进行总结，还有大量的后续工作仍待今后的参赛选手和老师进行补充与修订。</br>
+竞赛模型为大跨度筒壳结构，采用竹皮材料制作，模型有落地筒壳和落地筒拱两种形式，模型制作完成后，与木质底板固定，木质底板采用夹具固定于加载台上进行加载。</FONT></P>
+<P style="MARGIN-RIGHT: 0px" align=center><a href="http://www.cimai.com.cn/" target="_blank"><FONT face=幼圆 size=5><IMG style="WIDTH: 552px; HEIGHT: 718px" src="coverpage.jpg" align=baseline></FONT></a></P>
+<P style="MARGIN-RIGHT: 0px" align=center>
+<FONT face=幼圆 
+size=5>&nbsp;作者：<a href="http://www.cimai.com.cn/" target="_blank">商丘师范学院大学生结构模型协会</a></FONT></P>
+<P style="MARGIN-RIGHT: 0px" align=center><FONT face=幼圆 size=5></FONT>&nbsp;</P>
+<P style="MARGIN-RIGHT: 0px" align=center><FONT face=幼圆 size=5>
+<a href="https://space.bilibili.com/2128517841/" target="_blank"><IMG style="WIDTH: 402px; HEIGHT: 518px" height=400 src="contection.jpg" width=353 align=baseline></a></FONT></P>
+<P style="MARGIN-RIGHT: 0px" align=center>&nbsp;</P>
+</BODY>
+</HTML>

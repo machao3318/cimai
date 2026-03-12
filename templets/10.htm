@@ -1,0 +1,311 @@
+<html>
+
+<head>
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>大学生结构模型参赛手册</title>
+<style>
+<!--
+.large {  font-size: 10.5pt;line-height: 16pt}
+-->
+</style>
+<link type="text/css" rel="stylesheet" href="video/ckplayer/css/ckplayer.css" />
+		<!--
+			如果需要使用其它语言，请在此处引入相应的js,比如:<script type="text/javascript" src="video/ckplayer/language/en.js" charset="UTF-8"></script>
+		-->
+		<script type="text/javascript" src="video/ckplayer/js/ckplayer.min.js" charset="UTF-8"></script>
+</head>
+
+<body>
+<DIV style="FONT-SIZE: 9pt;"> <CENTER class=large><font size="4"><b>河南省第二届结构设计比赛</b></font></br>
+<font size="3"><b>举办地点：河南大学</br>
+举办时间：2013年11月  </br>
+参赛资格：设置有土木工程及相关专业的高校</br>
+竞赛题目：顶部中间承受集中荷载作用的单层房屋结构模型  </br>
+竞赛内容：方案设计与理论分析、结构模型制作、作品介绍与答辩、模型加载试验</br></b></font>
+
+</br> </CENTER></div>
+ 
+<TABLE cellSpacing=2 cellPadding=2 width="100%" border=0>
+        
+        <TR>
+          <TD width=60% bgColor=#fde2bf><SPAN><A href="">ansys命令流分析结构模型案例</A></SPAN></TD>
+          <TD width=40% bgColor=#fbdff8><SPAN   style="FONT-SIZE: 9pt; FONT-FAMILY: 新细明体">ansys命令流</SPAN></TD></TR>
+        <TR>
+          <TD>
+            <TABLE cellSpacing=0 cellPadding=2 width=500 border=1 align=top>
+              
+              <TR>
+                <TD><SPAN><img src=img/13.jpg> </SPAN></TD></TR>
+ <TR>
+                <TD><SPAN><img src=img/14.jpg> </SPAN></TD></TR>
+ <TR>
+                <TD><SPAN><img src=img/15.jpg> </SPAN></TD></TR>
+ <TR>
+                <TD><SPAN><img src=img/16.jpg> </SPAN></TD></TR>
+ <TR>
+                <TD><SPAN><img src=img/17.jpg> </SPAN></TD></TR>
+ <TR>
+                <TD><SPAN><img src=img/12.jpg> </SPAN></TD></TR>
+              <TR>
+                <TD width=500 height=500>
+		<div class="video" style="width: 100%; height: 500px;max-width: 800px;">播放容器</div>
+		<script>
+			//调用开始
+			var videoObject = {
+				container: '.video', //视频容器
+				poster:'img/simulation/model1.jpg',//封面图片
+				video:'video/ansysreadfile.mp4'//视频地址
+			};
+			var player=new ckplayer(videoObject)//调用播放器并赋值给变量player
+			/*
+			 * ===============================================================================================
+			 * 以上代码已完成调用演示，下方的代码是演示监听动作和外部控制的部分
+			 * ===============================================================================================
+			 * ===============================================================================================
+			 */
+			player.play(function(){
+				document.getElementById('state').innerHTML='监听到播放';
+			});
+			player.pause(function(){
+				document.getElementById('state').innerHTML='监听到暂停';
+			});
+			player.volume(function(vol){
+				document.getElementById('state').innerHTML='监听到音量改变：'+vol;
+			});
+			player.muted(function(b){
+				document.getElementById('state2').innerHTML='监听到静音状态：'+b;
+			});
+			player.full(function(b){
+				document.getElementById('state').innerHTML='监听到全屏状态：'+b;
+			});
+			player.ended(function(){
+				document.getElementById('state').innerHTML='监听到播放结束';
+			});
+		</script>
+		<p>商丘师范学院建筑工程学院官网：<a href="https://jzytmgcxy.sqnu.edu.cn/" target="_blank">https://jzytmgcxy.sqnu.edu.cn/</a></p>
+		<p>商丘师范学院大学生结构设计协会手册：<a href="https://jzytmgcxy.sqnu.edu.cn/" target="_blank">https://jzytmgcxy.sqnu.edu.cn/</a></p>
+		<p>技术支持：<A href="mailto:hnbim@qq.com">商丘师范学院大学生结构模型协会</A></p></TD></TR></TABLE> </TD>
+          <TD width=40%><SPAN>
+<p align="center">
+/FILENAME,MARK-2</br>
+/UNITS,SI</br>
+/TITLE,MARK-2</br>
+/prep7</br>
+n,1001,15,5,0</br>
+n,1002,40,5,124</br>
+n,1003,160,5,245</br>
+n,1004,300,5,288</br>
+n,1005,440,5,245</br>
+n,1006,560,5,124</br>
+n,1007,585,5,0</br>
+n,1008,76,5,105</br>
+n,1009,300,5,245</br>
+n,1010,524,5,105</br>
+n,1011,122,5,180</br>
+n,1012,233,5,247</br>
+n,1013,367,5,247</br>
+n,1014,478,5,180</br>
+
+ngen,4,1000,1001,1014,,0,220,0</br>
+
+NPLOT,1</br>
+NLIST</br>
+et,1,link8</br>
+et,2,link10</br>
+r,1,49</br>
+r,1,8</br>
+SSTIF,ON    </br>        
+mp,ex,1,1.0e10</br>
+mp,prxy,1,0.31</br>
+mp,dens,1,0.2</br>
+
+
+sectype,1,beam,rect    !桁架杆截面</br>
+
+
+!第一榀上弦杆</br>
+E,1001,1002</br>
+E,1002,1003</br>
+E,1003,1004</br>
+E,1004,1005</br>
+E,1005,1006</br>
+E,1006,1007</br>
+
+!下弦杆</br>
+E,1001,1003</br>
+E,1003,1005</br>
+E,1005,1007</br>
+
+E,1011,1012</br>
+E,1013,1014</br>
+
+
+!竖杆</br>
+E,1002,1008</br>
+E,1004,1009</br>
+E,1006,1010</br>
+
+
+!第二榀下弦杆</br>
+E,2001,2002</br>
+E,2002,2003</br>
+E,2003,2004</br>
+E,2004,2005</br>
+E,2005,2006</br>
+E,2006,2007
+</br>
+!下弦杆</br>
+E,2001,2003</br>
+E,2003,2005</br>
+E,2005,2007</br>
+
+E,2011,2012</br>
+E,2013,2014</br>
+
+
+!竖杆</br>
+E,2002,2008</br>
+E,2004,2009</br>
+E,2006,2010</br>
+
+!第三榀下弦杆</br>
+E,3001,3002</br>
+E,3002,3003</br>
+E,3003,3004</br>
+E,3004,3005</br>
+E,3005,3006</br>
+E,3006,3007</br>
+
+!下弦杆</br>
+E,3001,3003</br>
+E,3003,3005</br>
+E,3005,3007</br>
+
+E,3011,3012</br>
+E,3013,3014</br>
+
+
+!竖杆</br>
+E,3002,3008</br>
+E,3004,3009</br>
+E,3006,3010</br>
+
+!第四榀下弦杆</br>
+E,4001,4002</br>
+E,4002,4003</br>
+E,4003,4004</br>
+E,4004,4005</br>
+E,4005,4006</br>
+E,4006,4007</br>
+
+!下弦杆</br>
+E,4001,4003</br>
+E,4003,4005</br>
+E,4005,4007</br>
+
+E,4011,4012</br>
+E,4013,4014</br>
+
+
+!竖杆</br>
+E,4002,4008</br>
+E,4004,4009</br>
+E,4006,4010</br>
+
+
+!纵向杆</br>
+E,1004,2004</br>
+E,2004,3004</br>
+E,3004,4004</br>
+
+E,1002,2002</br>
+E,2002,3002</br>
+E,3002,4002</br>
+E,1006,2006</br>
+E,2006,3006</br>
+E,3006,4006</br>
+E,1009,2009</br>
+E,2009,3009</br>
+E,3009,4009</br>
+
+EPLOT</br>
+ELIST</br>
+!一级施加荷载节点</br>
+n,6001,300,100,245</br>
+n,6002,300,350,245</br>
+n,6003,300,600,245</br>
+n,6004,300,100,288</br>
+n,6005,300,350,288</br>
+n,6006,300,600,288
+</br>
+E,6001,6004</br>
+E,6002,6005</br>
+E,6003,6006</br>
+
+
+
+
+n,6011,60,3.5,120</br>
+n,6012,540,3.5,120</br>
+
+
+n,6014,60,696.5,120</br>
+n,6015,540,696.5,120</br>
+
+nummrg,all</br>
+
+amesh,all</br>
+
+/solu</br>
+!施加边界条件</br>
+
+D,1001,all</br>
+
+D,1007,all</br>
+
+
+D,2001,all</br>
+D,2007,all</br>
+
+
+D,3001,all</br>
+D,3007,all</br>
+
+
+D,4001,all</br>
+D,4007,all</br>
+
+
+
+
+
+!CPLGEN,2,all,4008,6014,6015</br>
+!CPSGEN,2,1000,6014,6015</br>
+F,6001,FZ,-30</br>
+F,6002,FZ,-30</br>
+F,6003,FZ,-30</br>
+
+F,1004,FZ,-50</br>
+F,2004,FX,60</br>
+F,3004,FX,-60</br>
+F,4004,FZ,-50</br>
+
+F,1004,FY,30</br>
+F,6011,FY,30</br>
+F,6012,FY,30</br>
+
+
+
+antype,4</br>
+
+time,12</br>
+nsub,6</br>
+solve</br>
+      
+　</p> </SPAN> </DD></TD></TR></TABLE>
+
+</body>
+
+</html>

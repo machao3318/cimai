@@ -1,0 +1,600 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>大学生结构模型参赛手册</title>
+<style>
+<!--
+.large {  font-size: 10.5pt;line-height: 16pt}
+-->
+</style>
+</head>
+
+<body>
+
+<p align="center"><br>
+<span lang="zh-cn"><font size="4"><b>表格标记<!-- #EndEditable --><BR><!-- #BeginEditable "%D7%F7%D5%DF%BC%B0%CA%B1%BC%E4" -->　<!-- #EndEditable --><!-- #BeginEditable "%D5%FD%CE%C4" --><SPAN 
+class=large><FONT color=#000000></FONT></SPAN>
+<TABLE class=large cellSpacing=0 cellPadding=5 width="100%" border=0>
+  
+  <TR vAlign=top>
+    <TD class=article><SPAN><A href="#1">&lt;TABLE&gt; &lt;TR&gt; 
+      &lt;TD&gt;</A> <BR><A href="#2">&lt;TH&gt;</A> <BR><A 
+      href="#3">&lt;CAPTION&gt;</A> </SPAN></TD></TR>
+  <TR>
+    <TD class=article bgColor=#bbd1d1>
+      <TABLE cellSpacing=0 cellPadding=0 width="100%" align=center>
+        
+        <TR>
+          <TD>
+            <DIV style="FONT-SIZE: 9pt; FONT-FAMILY: 新细明体"><FONT 
+            color=#ca00ca><A name=1><U>■</U></A> &lt;TABLE&gt; &lt;TR&gt; 
+            &lt;TD&gt; ：</FONT></DIV></TD>
+          <TD align=right>
+            <DIV style="FONT-SIZE: 9pt; FONT-FAMILY: 新细明体"><A 
+            href="#top">▲Top</A></DIV></TD></TR></TABLE></TD></TR>
+  <TR vAlign=top>
+    <TD class=article><SPAN>这三个标记是定义表格的最重要的标记，可以说只学这三个己足够。 
+      <BR>&lt;TABLE&gt;是一个容器标记，意思是说它用以声明这是表格而且其他表格标记只能在他的 范围内才适用，属容器标记的还有其他。 
+      <BR>&lt;TR&gt;用以标示<FONT color=#ff0000>表格列</FONT>（row） 
+      <BR>&lt;TD&gt;用以标示<FONT color=#ff0000>储存格</FONT>（cell） </SPAN>
+      <P><SPAN><FONT color=#ff00ff>&lt;TABLE&gt; 的参数设定（常用）：</FONT> <BR>例如： 
+      &lt;table <FONT color=#ff0000>width</FONT>="400" <FONT 
+      color=#ff0000>border</FONT>="1" <FONT color=#ff0000>cellspacing</FONT>="2" 
+      <FONT color=#ff0000>cellpadding</FONT>="2" <FONT 
+      color=#ff0000>align</FONT>="CENTER" <FONT 
+      color=#ff0000>valign</FONT>="TOP" <FONT 
+      color=#ff0000>background</FONT>="myweb.gif" <FONT 
+      color=#ff0000>bgcolor</FONT>="#0000FF" <FONT 
+      color=#ff0000>bordercolor</FONT>="#FF00FF" <FONT 
+      color=#ff0000>bordercolorlight</FONT>="#00FF00" <FONT 
+      color=#ff0000>bordercolordark</FONT>="#00FFFF" <FONT 
+      color=#ff0000>cols</FONT>="2"&gt;</SPAN> 
+      <P>
+      <UL>
+        <LI><SPAN><FONT color=#ff0000>width</FONT>="400" <BR>表格宽度，接受绝对值（如 
+        80）及相对值（如 80%）。 </SPAN>
+        <P></P>
+        <LI><SPAN><FONT color=#ff0000>border</FONT>="1" 
+        <BR>表格边框厚度，不同浏览器有不同的内定值，故请指明。 </SPAN>
+        <P></P>
+        <LI><SPAN><FONT color=#ff0000>cellspacing</FONT>="2" <BR>表格格线厚度，请看<FONT 
+        color=#0000ff>例子三</FONT>，那是加厚到 5 的格线。 </SPAN>
+        <P></P>
+        <LI><SPAN><FONT color=#ff0000>cellpadding</FONT>="2" 
+        <BR>文字与格线的距离，请看<FONT color=#0000ff>例子四</FONT>，那是加至 10 的 padding。 </SPAN>
+        <P></P>
+        <LI><SPAN><FONT color=#ff0000>align</FONT>="CENTER" 
+        <BR>表格的摆放位置（水平），可选值为： <FONT color=#ff0000>left</FONT>, <FONT 
+        color=#ff0000>right</FONT>, <FONT color=#ff0000>center</FONT>，请看<FONT 
+        color=#0000ff>例子五或六</FONT>，那表格 
+        是放于中间的，为怕一些浏览器不支援，故特加上居中标记&lt;CENTER&gt;，只是多 层保证而己，当然只用&lt;CENTER&gt;亦可。 
+        </SPAN>
+        <P></P>
+        <LI><SPAN><FONT color=#ff0000>valign</FONT>="TOP". 
+        <BR>表格内字画等的摆放贴　位置（垂直），可选值为： <FONT color=#ff0000>top</FONT>, <FONT 
+        color=#ff0000>middle</FONT>, <FONT color=#ff0000>bottom</FONT>。 </SPAN>
+        <P></P>
+        <LI><SPAN><FONT color=#ff0000>background</FONT>="myweb.gif" <BR>表格　纸，与 
+        bgcolor 不要同用。 </SPAN>
+        <P></P>
+        <LI><SPAN><FONT color=#ff0000>bgcolor</FONT>="#0000FF" <BR>表格底色，与 
+        background 不要同用，请看<FONT color=#0000ff>例子六</FONT>。 </SPAN>
+        <P></P>
+        <LI><SPAN><FONT color=#ff0000>bordercolor</FONT>="#FF00FF" <BR>表格边框颜色，NC 
+        与 IE 有不同的效果，请看<FONT color=#0000ff>例子六</FONT>。 </SPAN>
+        <P></P>
+        <LI><SPAN><FONT color=#ff0000>bordercolorlight</FONT>="#00FF00" 
+        <BR>表格边框<FONT color=#008000>向</FONT>光部分的颜色，请看<FONT 
+        color=#0000ff>例子二</FONT>。<FONT color=#ff0000>『只适用于 IE』</FONT> </SPAN>
+        <P></P>
+        <LI><SPAN><FONT color=#ff0000>bordercolordark</FONT>="#00FFFF" 
+        <BR>表格边框<FONT color=#008000>背</FONT>光部分的颜色，请看<FONT 
+        color=#0000ff>例子二</FONT>，使用 bordercolorlight 或 bordercolordark 时 
+        bordercolor 将会失效。<FONT color=#ff0000>『只适用于 IE』</FONT> </SPAN>
+        <P></P>
+        <LI><SPAN><FONT color=#ff0000>cols</FONT>="2" 
+        <BR>表格栏位数目，只是让浏览器在下载表格是先画出整个表格而己。 </SPAN></LI></UL>
+      <P><SPAN><FONT color=#ff00ff>&lt;TR&gt; 的参数设定（常用）：</FONT> <BR>例如：&lt;tr 
+      <FONT color=#ff0000>align</FONT>="RIGHT" <FONT 
+      color=#ff0000>valign</FONT>="MIDDLE" <FONT 
+      color=#ff0000>bgcolor</FONT>="#0000FF" <FONT 
+      color=#ff0000>bordercolor</FONT>="#FF00FF" <FONT 
+      color=#ff0000>bordercolorlight</FONT>="#808080" <FONT 
+      color=#ff0000>bordercolordark</FONT>="#FF0000"&gt; </SPAN>
+      <UL>
+        <LI><SPAN><FONT color=#ff0000>align</FONT>="RIGHT" 
+        <BR>该一列内字画等的摆放贴　位置（水平），可选值为： <FONT color=#ff0000>left</FONT>, <FONT 
+        color=#ff0000>center</FONT>, <FONT color=#ff0000>right</FONT>。 </SPAN>
+        <P></P>
+        <LI><SPAN><FONT color=#ff0000>valign</FONT>="MIDDLE" 
+        <BR>该一列内字画等的摆放贴　位置（垂直），可选值为： <FONT color=#ff0000>top</FONT>, <FONT 
+        color=#ff0000>middle</FONT>, <FONT color=#ff0000>bottom</FONT>。 </SPAN>
+        <P></P>
+        <LI><SPAN><FONT color=#ff0000>bgcolor</FONT>="#0000FF" <BR>该一列底色，请看<FONT 
+        color=#0000ff>例子五</FONT>。 </SPAN>
+        <P></P>
+        <LI><SPAN><FONT color=#ff0000>bordercolor</FONT>="#FF00FF" 
+        <BR>该一列边框颜色，请看<FONT color=#0000ff>例子三</FONT>。<FONT color=#ff0000>『只适用于 
+        IE』</FONT> </SPAN>
+        <P></P>
+        <LI><SPAN><FONT color=#ff0000>bordercolorlight</FONT>="#808080" 
+        <BR>该一列边框<FONT color=#008000>向</FONT>光部分的颜色，请看<FONT 
+        color=#0000ff>例子三</FONT>。<FONT color=#ff0000>『只适用于 IE』</FONT> </SPAN>
+        <P></P>
+        <LI><SPAN><FONT color=#ff0000>bordercolordark</FONT>="#FF0000" 
+        <BR>该一列边框<FONT color=#008000>背</FONT>光部分的颜色，请看<FONT 
+        color=#0000ff>例子三</FONT>，使用 bordercolorlight 或 bordercolordark 时 
+        bordercolor 将会失效。<FONT color=#ff0000>『只适用于 IE』</FONT> </SPAN></LI></UL>
+      <P><SPAN><FONT color=#ff00ff>&lt;TD&gt; 的参数设定（常用）：</FONT> <BR>例如：&lt;td 
+      <FONT color=#ff0000>width</FONT>="48%" <FONT 
+      color=#ff0000>height</FONT>="400" <FONT color=#ff0000>colspan</FONT>="5" 
+      <FONT color=#ff0000>rowspan</FONT>="4" <FONT 
+      color=#ff0000>align</FONT>="RIGHT" <FONT 
+      color=#ff0000>valign</FONT>="BOTTOM" <FONT 
+      color=#ff0000>bgcolor</FONT>="#FF00FF" <FONT 
+      color=#ff0000>bordercolor</FONT>="#808080" <FONT 
+      color=#ff0000>bordercolorlight</FONT>="#FF0000" <FONT 
+      color=#ff0000>bordercolordark</FONT>="#00FF00" <FONT 
+      color=#ff0000>background</FONT>="myweb.gif"&gt; </SPAN>
+      <UL>
+        <LI><SPAN><FONT color=#ff0000>width</FONT>="48%" <BR>该一储存格宽度，接受绝对值（如 
+        80）及相对值（如 80%）。 </SPAN>
+        <P></P>
+        <LI><SPAN><FONT color=#ff0000>height</FONT>="400" <BR>该一储存格高度。 </SPAN>
+        <P></P>
+        <LI><SPAN><FONT color=#ff0000>colspan</FONT>="5" 
+        <BR>该一储存格向右打通的栏数。请看<FONT color=#0000ff>例子六</FONT> </SPAN>
+        <P></P>
+        <LI><SPAN><FONT color=#ff0000>rowspan</FONT>="4" 
+        <BR>该一储存格向下打通的列数。请看<FONT color=#0000ff>例子六</FONT> </SPAN>
+        <P></P>
+        <LI><SPAN><FONT color=#ff0000>align</FONT>="RIGHT" 
+        <BR>该一储存格内字画等的摆放贴　位置（水平），可选值为： <FONT color=#ff0000>left</FONT>, <FONT 
+        color=#ff0000>center</FONT>, <FONT color=#ff0000>right</FONT>。 </SPAN>
+        <P></P>
+        <LI><SPAN><FONT color=#ff0000>valign</FONT>="BOTTOM" 
+        <BR>该一储存格内字画等的摆放贴　位置（垂直），可选值为： <FONT color=#ff0000>top</FONT>, <FONT 
+        color=#ff0000>middle</FONT>, <FONT color=#ff0000>bottom</FONT>。 </SPAN>
+        <P></P>
+        <LI><SPAN><FONT color=#ff0000>bgcolor</FONT>="#FF00FF" 
+        <BR>该一储存格底色，请看<FONT color=#0000ff>例子四</FONT>。 </SPAN>
+        <P></P>
+        <LI><SPAN><FONT color=#ff0000>bordercolor</FONT>="#808080" 
+        <BR>该一储存格边框颜色，请看<FONT color=#0000ff>例子三</FONT>。<FONT color=#ff0000>『只适用于 
+        IE』</FONT> </SPAN>
+        <P></P>
+        <LI><SPAN><FONT color=#ff0000>bordercolorlight</FONT>="#FF0000" 
+        <BR>该一储存格边框<FONT color=#008000>向</FONT>光部分的颜色，请看<FONT 
+        color=#0000ff>例子三</FONT>。<FONT color=#ff0000>『只适用于 IE』</FONT> </SPAN>
+        <P></P>
+        <LI><SPAN><FONT color=#ff0000>bordercolordark</FONT>="#00FF00" 
+        <BR>该一储存格边框<FONT color=#008000>背</FONT>光部分的颜色，请看<FONT 
+        color=#0000ff>例子三</FONT>，使用 bordercolorlight 或 bordercolordark 时 
+        bordercolor 将会失效。<FONT color=#ff0000>『只适用于 IE』</FONT> </SPAN>
+        <P></P>
+        <LI><SPAN><FONT color=#ff0000>background</FONT>="myweb.gif" 
+        <BR>该一储存格　纸，与 bgcolor 任用其一。 </SPAN></LI></UL>
+      <P><SPAN><FONT color=#ff00ff>例子一：</FONT> </SPAN>
+      <TABLE cellSpacing=0 cellPadding=2 width="100%" border=1>
+        
+        <TR>
+          <TD width="4%" bgColor=#0000b7><SPAN><FONT 
+            color=#ffffff>原始码</FONT></SPAN></TD>
+          <TD vAlign=top bgColor=#ffffff><SPAN><FONT color=#009b00>&lt;table 
+            width="60%" border="1"&gt;</FONT> <BR><FONT 
+            color=#009595>&lt;tr&gt;</FONT><FONT 
+            color=#ff6ab5>&lt;td&gt;</FONT>只有一个储存格（cell）的表格<FONT 
+            color=#ff6ab5>&lt;/td&gt;</FONT><FONT 
+            color=#009595>&lt;/tr&gt;</FONT> <BR><FONT 
+            color=#009b00>&lt;/table&gt;</FONT> </SPAN></TD></TR>
+        <TR>
+          <TD width="4%" bgColor=#0000b7><SPAN><FONT 
+            color=#ffffff>显示结果</FONT></SPAN></TD>
+          <TD bgColor=#ffffff>
+            <P>&nbsp; 
+            <TABLE width="60%" border=1>
+              
+              <TR>
+                <TD><SPAN>只有一个储存格（cell）的表格</SPAN></TD></TR></TABLE>
+            <P></P></TD></TR></TABLE>
+      <P><SPAN><FONT color=#ff00ff>例子二：</FONT> </SPAN>
+      <TABLE cellSpacing=0 cellPadding=2 width="100%" border=1>
+        
+        <TR>
+          <TD width="4%" bgColor=#0000b7><SPAN><FONT 
+            color=#ffffff>原始码</FONT></SPAN></TD>
+          <TD vAlign=top bgColor=#ffffff><SPAN><FONT color=#009b00>&lt;table 
+            width="60%" border="5" bordercolorlight="#FF00FF" 
+            bordercolordark="#FF0000"&gt;</FONT> <BR><FONT 
+            color=#009595>&lt;tr&gt;</FONT><FONT 
+            color=#ff6ab5>&lt;td&gt;</FONT>第一列第一栏<FONT 
+            color=#ff6ab5>&lt;/td&gt;&lt;td&gt;</FONT>第一列第二栏<FONT 
+            color=#ff6ab5>&lt;/td&gt;</FONT><FONT 
+            color=#009595>&lt;/tr&gt;</FONT> <BR><FONT 
+            color=#009b00>&lt;/table&gt;</FONT> </SPAN></TD></TR>
+        <TR>
+          <TD width="4%" bgColor=#0000b7><SPAN><FONT 
+            color=#ffffff>显示结果</FONT></SPAN></TD>
+          <TD bgColor=#ffffff>
+            <P>&nbsp; 
+            <TABLE borderColorDark=#ff0000 width="60%" borderColorLight=#ff00ff 
+            border=5>
+              
+              <TR>
+                <TD><SPAN>第一列第一栏</SPAN></TD>
+                <TD><SPAN>第一列第二栏</SPAN></TD></TR></TABLE>
+            <P></P></TD></TR></TABLE>
+      <P><SPAN><FONT color=#ff00ff>例子三：</FONT> </SPAN>
+      <TABLE cellSpacing=0 cellPadding=2 width="100%" border=1>
+        
+        <TR>
+          <TD width="4%" bgColor=#0000b7><SPAN><FONT 
+            color=#ffffff>原始码</FONT></SPAN></TD>
+          <TD vAlign=top bgColor=#ffffff><SPAN><FONT color=#009b00>&lt;table 
+            width="60%" border="1" cellspacing="5"&gt;</FONT> 
+            <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<FONT color=#009595>&lt;tr 
+            bordercolor="#0000FF"&gt;</FONT> </SPAN>
+            <DD><SPAN><FONT color=#ff6ab5>&lt;td&gt;</FONT>第一列第一栏<FONT 
+            color=#ff6ab5>&lt;/td&gt;</FONT> </SPAN>
+            <DD><SPAN><FONT color=#ff6ab5>&lt;td&gt;</FONT>第一列第二栏<FONT 
+            color=#ff6ab5>&lt;/td&gt;</FONT> 
+            <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<FONT 
+            color=#009595>&lt;/tr&gt;</FONT> 
+            <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<FONT color=#009595>&lt;tr 
+            bordercolorlight="#FF00FF" bordercolordark="#00FF00"&gt;</FONT> 
+            </SPAN>
+            <DD><SPAN><FONT color=#ff6ab5>&lt;td&gt;</FONT>第二列第一栏<FONT 
+            color=#ff6ab5>&lt;/td&gt;</FONT> </SPAN>
+            <DD><SPAN><FONT color=#ff6ab5>&lt;td&gt;</FONT>第二列第二栏<FONT 
+            color=#ff6ab5>&lt;/td&gt;</FONT> 
+            <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<FONT 
+            color=#009595>&lt;/tr&gt;</FONT> <BR><FONT 
+            color=#009b00>&lt;/table&gt;</FONT> </SPAN></DD></TD></TR>
+        <TR>
+          <TD width="4%" bgColor=#0000b7><SPAN><FONT 
+            color=#ffffff>显示结果</FONT></SPAN></TD>
+          <TD bgColor=#ffffff>
+            <P>&nbsp; 
+            <TABLE cellSpacing=5 width="60%" border=1>
+              
+              <TR borderColor=#0000ff>
+                <TD><SPAN>第一列第一栏</SPAN></TD>
+                <TD><SPAN>第一列第二栏</SPAN></TD></TR>
+              <TR borderColorLight=#ff00ff borderColorDark=#00ff00>
+                <TD><SPAN>第二列第一栏</SPAN></TD>
+                <TD><SPAN>第二列第二栏</SPAN></TD></TR></TABLE>
+            <P></P></TD></TR></TABLE>
+      <P><SPAN><FONT color=#ff00ff>例子四：</FONT> </SPAN>
+      <TABLE cellSpacing=0 cellPadding=2 width="100%" border=1>
+        
+        <TR>
+          <TD width="4%" bgColor=#0000b7><SPAN><FONT 
+            color=#ffffff>原始码</FONT></SPAN></TD>
+          <TD vAlign=top bgColor=#ffffff><SPAN><FONT color=#009b00>&lt;table 
+            width="60%" border="1" cellpadding="10"&gt;</FONT> 
+            <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<FONT 
+            color=#009595>&lt;tr&gt;</FONT> </SPAN>
+            <DD><SPAN><FONT color=#ff6ab5>&lt;td 
+            bgcolor="#FFCCE6"&gt;</FONT>第一列第一栏<FONT 
+            color=#ff6ab5>&lt;/td&gt;</FONT> </SPAN>
+            <DD><SPAN><FONT color=#ff6ab5>&lt;td 
+            bgcolor="#FFFFC6"&gt;</FONT>第一列第二栏<FONT 
+            color=#ff6ab5>&lt;/td&gt;</FONT> 
+            <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<FONT 
+            color=#009595>&lt;/tr&gt;</FONT> 
+            <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<FONT 
+            color=#009595>&lt;tr&gt;</FONT> </SPAN>
+            <DD><SPAN><FONT color=#ff6ab5>&lt;td 
+            bgcolor="#FFD9FF"&gt;</FONT>第二列第一栏<FONT 
+            color=#ff6ab5>&lt;/td&gt;</FONT> </SPAN>
+            <DD><SPAN><FONT color=#ff6ab5>&lt;td 
+            bgcolor="#DAB4B4"&gt;</FONT>第二列第二栏<FONT 
+            color=#ff6ab5>&lt;/td&gt;</FONT> 
+            <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<FONT 
+            color=#009595>&lt;/tr&gt;</FONT> <BR><FONT 
+            color=#009b00>&lt;/table&gt;</FONT> </SPAN></DD></TD></TR>
+        <TR>
+          <TD width="4%" bgColor=#0000b7><SPAN><FONT 
+            color=#ffffff>显示结果</FONT></SPAN></TD>
+          <TD bgColor=#ffffff>
+            <P>&nbsp; 
+            <TABLE cellPadding=10 width="60%" border=1>
+              
+              <TR>
+                <TD bgColor=#ffcce6><SPAN>第一列第一栏</SPAN></TD>
+                <TD bgColor=#ffffc6><SPAN>第一列第二栏</SPAN></TD></TR>
+              <TR>
+                <TD bgColor=#ffd9ff><SPAN>第二列第一栏</SPAN></TD>
+                <TD bgColor=#dab4b4><SPAN>第二列第二栏</SPAN></TD></TR></TABLE>
+            <P></P></TD></TR></TABLE>
+      <P><SPAN><FONT color=#ff00ff>例子五：</FONT> </SPAN>
+      <TABLE cellSpacing=0 cellPadding=2 width="100%" border=1>
+        
+        <TR>
+          <TD width="4%" bgColor=#0000b7><SPAN><FONT 
+            color=#ffffff>原始码</FONT></SPAN></TD>
+          <TD vAlign=top bgColor=#ffffff><SPAN><FONT 
+            color=#004f9d>&lt;center&gt;</FONT> <BR><FONT 
+            color=#009b00>&lt;table width="60%" cellspacing="0" cellpadding="2" 
+            align="CENTER"&gt;</FONT> <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<FONT 
+            color=#009595>&lt;tr&gt;</FONT> </SPAN>
+            <DD><SPAN><FONT color=#ff6ab5>&lt;td 
+            bgcolor="#FFD2E9"&gt;</FONT>第一列第一栏<FONT 
+            color=#ff6ab5>&lt;/td&gt;</FONT> </SPAN>
+            <DD><SPAN><FONT color=#ff6ab5>&lt;td 
+            bgcolor="#FFDAB5"&gt;</FONT>第一列第二栏<FONT 
+            color=#ff6ab5>&lt;/td&gt;</FONT> </SPAN>
+            <DD><SPAN><FONT color=#ff6ab5>&lt;td 
+            bgcolor="#FFFFB5"&gt;</FONT>第一列第三栏<FONT 
+            color=#ff6ab5>&lt;/td&gt;</FONT> 
+            <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<FONT 
+            color=#009595>&lt;/tr&gt;</FONT> 
+            <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<FONT color=#009595>&lt;tr 
+            bgcolor="#C0C0C0"&gt;</FONT> </SPAN>
+            <DD><SPAN><FONT color=#ff6ab5>&lt;td&gt;</FONT>第二列第一栏<FONT 
+            color=#ff6ab5>&lt;/td&gt;</FONT> </SPAN>
+            <DD><SPAN><FONT color=#ff6ab5>&lt;td&gt;</FONT>第二列第二栏<FONT 
+            color=#ff6ab5>&lt;/td&gt;</FONT> </SPAN>
+            <DD><SPAN><FONT color=#ff6ab5>&lt;td&gt;</FONT>第二列第三栏<FONT 
+            color=#ff6ab5>&lt;/td&gt;</FONT> 
+            <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<FONT 
+            color=#009595>&lt;/tr&gt;</FONT> <BR><FONT 
+            color=#009b00>&lt;/table&gt;</FONT> <BR><FONT 
+            color=#004f9d>&lt;/center&gt;</FONT> </SPAN></DD></TD></TR>
+        <TR>
+          <TD width="4%" bgColor=#0000b7><SPAN><FONT 
+            color=#ffffff>显示结果</FONT></SPAN></TD>
+          <TD bgColor=#ffffff>
+            <P>
+            <CENTER>
+            <TABLE cellSpacing=0 cellPadding=2 width="60%" align=center 
+border=0>
+              
+              <TR>
+                <TD bgColor=#ffd2e9><SPAN>第一列第一栏</SPAN></TD>
+                <TD bgColor=#ffdab5><SPAN>第一列第二栏</SPAN></TD>
+                <TD bgColor=#ffffb5><SPAN>第一列第三栏</SPAN></TD></TR>
+              <TR bgColor=#c0c0c0>
+                <TD><SPAN>第二列第一栏</SPAN></TD>
+                <TD><SPAN>第二列第二栏</SPAN></TD>
+                <TD><SPAN>第二列第三栏</SPAN></TD></TR></TABLE></CENTER></TD></TR></TABLE>
+      <P><SPAN><FONT color=#ff00ff>例子六</FONT> </SPAN>
+      <TABLE cellSpacing=0 cellPadding=2 width="100%" border=1>
+        
+        <TR>
+          <TD width="4%" bgColor=#0000b7><SPAN><FONT 
+            color=#ffffff>原始码</FONT></SPAN></TD>
+          <TD vAlign=top bgColor=#ffffff><SPAN><FONT 
+            color=#004f9d>&lt;center&gt;</FONT> <BR><FONT 
+            color=#009b00>&lt;table width="350" border="1" cellspacing="0" 
+            cellpadding="2" align="CENTER" bgcolor="#FFC4E1" 
+            bordercolor="#0000FF"&gt;</FONT> 
+            <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<FONT 
+            color=#009595>&lt;tr&gt;</FONT> </SPAN>
+            <DD><SPAN><FONT color=#ff6ab5>&lt;td&gt;</FONT>第一列第一栏<FONT 
+            color=#ff6ab5>&lt;/td&gt;</FONT> </SPAN>
+            <DD><SPAN><FONT color=#ff6ab5>&lt;td colspan="2"&gt;</FONT>第一列 之 
+            第二栏及第三栏<FONT color=#ff6ab5>&lt;/td&gt;</FONT> 
+            <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<FONT 
+            color=#009595>&lt;/tr&gt;</FONT> 
+            <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<FONT 
+            color=#009595>&lt;tr&gt;</FONT> </SPAN>
+            <DD><SPAN><FONT color=#ff6ab5>&lt;td rowspan="2"&gt;</FONT>第二列及第三列 之 
+            第一栏<FONT color=#ff6ab5>&lt;/td&gt;</FONT> </SPAN>
+            <DD><SPAN><FONT color=#ff6ab5>&lt;td&gt;</FONT>第二列第二栏<FONT 
+            color=#ff6ab5>&lt;/td&gt;</FONT> </SPAN>
+            <DD><SPAN><FONT color=#ff6ab5>&lt;td&gt;</FONT>第二列第三栏<FONT 
+            color=#ff6ab5>&lt;/td&gt;</FONT> 
+            <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<FONT 
+            color=#009595>&lt;/tr&gt;</FONT> 
+            <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<FONT 
+            color=#009595>&lt;tr&gt;</FONT> </SPAN>
+            <DD><SPAN><FONT color=#ff6ab5>&lt;td&gt;</FONT>第三列第二栏<FONT 
+            color=#ff6ab5>&lt;/td&gt;</FONT> </SPAN>
+            <DD><SPAN><FONT color=#ff6ab5>&lt;td&gt;</FONT>第三列第三栏<FONT 
+            color=#ff6ab5>&lt;/td&gt;</FONT> 
+            <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<FONT 
+            color=#009595>&lt;/tr&gt;</FONT> <BR><FONT 
+            color=#009b00>&lt;/table&gt;</FONT> <BR><FONT 
+            color=#004f9d>&lt;/center&gt;</FONT> </SPAN></DD></TD></TR>
+        <TR>
+          <TD width="4%" bgColor=#0000b7><SPAN><FONT 
+            color=#ffffff>显示结果</FONT></SPAN></TD>
+          <TD bgColor=#ffffff>
+            <P>
+            <CENTER>
+            <TABLE borderColor=#0000ff cellSpacing=0 cellPadding=2 width=350 
+            align=center bgColor=#ffc4e1 border=1>
+              
+              <TR>
+                <TD><SPAN>第一列第一栏</SPAN></TD>
+                <TD colSpan=2><SPAN>第一列 之 第二栏及第三栏</SPAN></TD></TR>
+              <TR>
+                <TD rowSpan=2><SPAN>第二列及第三列 之 第一栏</SPAN></TD>
+                <TD><SPAN>第二列第二栏</SPAN></TD>
+                <TD><SPAN>第二列第三栏</SPAN></TD></TR>
+              <TR>
+                <TD><SPAN>第三列第二栏</SPAN></TD>
+                <TD><SPAN>第三列第三栏</SPAN></TD></TR></TABLE></CENTER></TD></TR></TABLE>
+      <P></P></TD></TR>
+  <TR>
+    <TD class=article bgColor=#bbd1d1>
+      <TABLE cellSpacing=0 cellPadding=0 width="100%" align=center>
+        
+        <TR>
+          <TD>
+            <DIV style="FONT-SIZE: 9pt; FONT-FAMILY: 新细明体"><FONT 
+            color=#ca00ca><A name=2><U>■</U></A> &lt;TH&gt; ：</FONT></DIV></TD>
+          <TD align=right>
+            <DIV style="FONT-SIZE: 9pt; FONT-FAMILY: 新细明体"><A 
+            href="#top">▲Top</A></DIV></TD></TR></TABLE></TD></TR>
+  <TR>
+    <TD 
+      class=article><SPAN>&lt;TH&gt;与&lt;TD&gt;同样是标示一个储存格，唯一不同的是&lt;TH&gt;所标示的储存格中的文字是以粗 
+      体出现，通常用于表格第一列以标示栏目。它的用法是取代&lt;TD&gt;的位置便可以，其参数 设定请参考&lt;TD&gt;。 
+      <BR>当然若为&lt;TD&gt;所标示的储存格中的文字加上粗体标记&lt;B&gt;便等如&lt;TH&gt;的效果。 </SPAN>
+      <P><SPAN><FONT color=#ff00ff>例子：</FONT> </SPAN>
+      <TABLE cellSpacing=0 cellPadding=2 width="100%" border=1>
+        
+        <TR>
+          <TD width="4%" bgColor=#0000b7><SPAN><FONT 
+            color=#ffffff>原始码</FONT></SPAN></TD>
+          <TD vAlign=top bgColor=#ffffff><SPAN><FONT 
+            color=#004f9d>&lt;center&gt;</FONT> <BR><FONT 
+            color=#009b00>&lt;table width="350" border="1" cellspacing="0" 
+            cellpadding="2" align="CENTER"&gt;</FONT> 
+            <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<FONT color=#009595>&lt;tr 
+            align="CENTER"&gt;</FONT> </SPAN>
+            <DD><SPAN><FONT color=#ff0000>&lt;th&gt;</FONT>Month<FONT 
+            color=#ff0000>&lt;/th&gt;&lt;th&gt;</FONT>% of IE visitor<FONT 
+            color=#ff0000>&lt;/th&gt;&lt;th&gt;</FONT>% of NC visitor<FONT 
+            color=#ff0000>&lt;/th&gt;</FONT> 
+            <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<FONT 
+            color=#009595>&lt;/tr&gt;</FONT> 
+            <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<FONT color=#009595>&lt;tr 
+            align="CENTER"&gt;</FONT> </SPAN>
+            <DD><SPAN><FONT color=#ff6ab5>&lt;td&gt;</FONT>August<FONT 
+            color=#ff6ab5>&lt;/td&gt;&lt;td&gt;</FONT>61%<FONT 
+            color=#ff6ab5>&lt;/td&gt;&lt;td&gt;</FONT>39%<FONT 
+            color=#ff6ab5>&lt;/td&gt;</FONT> 
+            <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<FONT 
+            color=#009595>&lt;/tr&gt;</FONT> 
+            <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<FONT color=#009595>&lt;tr 
+            align="CENTER"&gt;</FONT> </SPAN>
+            <DD><SPAN><FONT color=#ff6ab5>&lt;td&gt;</FONT>July<FONT 
+            color=#ff6ab5>&lt;/td&gt;&lt;td&gt;</FONT>54%<FONT 
+            color=#ff6ab5>&lt;/td&gt;&lt;td&gt;</FONT>46%<FONT 
+            color=#ff6ab5>&lt;/td&gt;</FONT> 
+            <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<FONT 
+            color=#009595>&lt;/tr&gt;</FONT> 
+            <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<FONT color=#009595>&lt;tr 
+            align="CENTER"&gt;</FONT> </SPAN>
+            <DD><SPAN><FONT color=#ff6ab5>&lt;td&gt;</FONT>June<FONT 
+            color=#ff6ab5>&lt;/td&gt;&lt;td&gt;</FONT>52%<FONT 
+            color=#ff6ab5>&lt;/td&gt;&lt;td&gt;</FONT>48%<FONT 
+            color=#ff6ab5>&lt;/td&gt;</FONT> 
+            <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<FONT 
+            color=#009595>&lt;/tr&gt;</FONT> <BR><FONT 
+            color=#009b00>&lt;/table&gt;</FONT> <BR><FONT 
+            color=#004f9d>&lt;/center&gt;</FONT> </SPAN></DD></TD></TR>
+        <TR>
+          <TD width="4%" bgColor=#0000b7><SPAN><FONT 
+            color=#ffffff>显示结果</FONT></SPAN></TD>
+          <TD bgColor=#ffffff>
+            <P>
+            <CENTER>
+            <TABLE cellSpacing=0 cellPadding=2 width=350 align=center 
+              border=1>
+              <TR align=middle>
+                <TH><SPAN>Month</SPAN></TH>
+                <TH><SPAN>% of IE visitor</SPAN></TH>
+                <TH><SPAN>% of NC visitor</SPAN></TH></TR>
+              <TR align=middle>
+                <TD><SPAN>August</SPAN></TD>
+                <TD><SPAN>61%</SPAN></TD>
+                <TD><SPAN>39%</SPAN></TD></TR>
+              <TR align=middle>
+                <TD><SPAN>July</SPAN></TD>
+                <TD><SPAN>54%</SPAN></TD>
+                <TD><SPAN>46%</SPAN></TD></TR>
+              <TR align=middle>
+                <TD><SPAN>June</SPAN></TD>
+                <TD><SPAN>52%</SPAN></TD>
+                <TD><SPAN>48%</SPAN></TD></TR></TABLE></CENTER></TD></TR></TABLE>
+      <P></P></TD></TR>
+  <TR>
+    <TD class=article bgColor=#bbd1d1>
+      <TABLE cellSpacing=0 cellPadding=0 width="100%" align=center>
+        
+        <TR>
+          <TD>
+            <DIV style="FONT-SIZE: 9pt; FONT-FAMILY: 新细明体"><FONT 
+            color=#ca00ca><A name=3><U>■</U></A> &lt;CAPTION&gt; 
+          ：</FONT></DIV></TD>
+          <TD align=right>
+            <DIV style="FONT-SIZE: 9pt; FONT-FAMILY: 新细明体"><A 
+            href="#top">▲Top</A></DIV></TD></TR></TABLE></TD></TR>
+  <TR>
+    <TD class=article><SPAN>&lt;CAPTION&gt; 的作用是为表格标示一个<FONT 
+      color=#ff00ff>标题列</FONT>，有如在表格上方加上一没格线的打通列。 当然亦可置于下方，通常用以存放该表格的标题。 </SPAN>
+      <P><SPAN><FONT color=#ff00ff>&lt;CAPTION&gt; 的参数设定（常用）：</FONT> 
+      <BR>例如：&lt;caption <FONT color=#ff0000>align</FONT>="TOP" <FONT 
+      color=#ff0000>valign</FONT>="TOP"&gt;&lt;/caption&gt; </SPAN>
+      <UL>
+        <LI><SPAN><FONT color=#ff0000>align</FONT>="TOP" <BR>该表格<FONT 
+        color=#ff00ff>标题列</FONT>相对于表格的摆放贴　位置（水平），可选值为： <FONT 
+        color=#ff0000>left</FONT>, <FONT color=#ff0000>center</FONT>, <FONT 
+        color=#ff0000>right</FONT>, <FONT color=#ff0000>top</FONT>, <FONT 
+        color=#ff0000>middle</FONT>, <FONT color=#ff0000>bottom</FONT>，若 
+        align="<FONT color=#ff0000>bottom</FONT>" 的话<FONT 
+        color=#ff00ff>标题列</FONT>便会出现对表格的下方，不管你 的原始码中把 &lt;caption&gt; 放在 
+        &lt;table&gt; 中的头部或尾部。 </SPAN>
+        <P></P>
+        <LI><SPAN><FONT color=#ff0000>valign</FONT>="TOP" <BR>该表格<FONT 
+        color=#ff00ff>标题列</FONT>相对于表格的摆放位置（上下），可选值为： <FONT 
+        color=#ff0000>top</FONT>, <FONT color=#ff0000>bottom</FONT>。和 <FONT 
+        color=#ff0000>align</FONT>="TOP" 或 <FONT 
+        color=#ff0000>align</FONT>="BOTTOM" 是一样的，虽然功能重复了，但如果你要<FONT 
+        color=#ff00ff>标题列</FONT> 置于下方及向右或向左贴　，那末两个参数便可一　用了。当只　一个参数时， 请首选 
+        align，因为 valign 是由 HTML 3.0 才开始的参数。 </SPAN></LI></UL>
+      <P><SPAN><FONT color=#ff00ff>例子：</FONT> </SPAN>
+      <TABLE cellSpacing=0 cellPadding=2 width="100%" border=1>
+        
+        <TR>
+          <TD width="4%" bgColor=#0000b7><SPAN><FONT 
+            color=#ffffff>原始码</FONT></SPAN></TD>
+          <TD vAlign=top bgColor=#ffffff><SPAN><FONT 
+            color=#004f9d>&lt;center&gt;</FONT> <BR><FONT 
+            color=#009b00>&lt;table width="350" border="1" cellspacing="0" 
+            cellpadding="2" align="CENTER"&gt;</FONT> <BR><FONT 
+            color=#ff0000>&lt;caption&gt;</FONT>网页速成 八月份访客浏览器使用分析<FONT 
+            color=#ff0000>&lt;/caption&gt;</FONT> 
+            <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<FONT color=#009595>&lt;tr 
+            align="CENTER"&gt;</FONT> </SPAN>
+            <DD><SPAN><FONT color=#ff6ab5>&lt;th&gt;</FONT>Month<FONT 
+            color=#ff6ab5>&lt;/th&gt;</FONT> </SPAN>
+            <DD><SPAN><FONT color=#ff6ab5>&lt;th&gt;</FONT>% of IE visitor<FONT 
+            color=#ff6ab5>&lt;/th&gt;</FONT> </SPAN>
+            <DD><SPAN><FONT color=#ff6ab5>&lt;th&gt;</FONT>% of NC visitor<FONT 
+            color=#ff6ab5>&lt;/th&gt;</FONT> 
+            <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<FONT 
+            color=#009595>&lt;/tr&gt;</FONT> 
+            <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<FONT color=#009595>&lt;tr 
+            align="CENTER"&gt;</FONT> </SPAN>
+            <DD><SPAN><FONT color=#ff6ab5>&lt;td&gt;</FONT>August<FONT 
+            color=#ff6ab5>&lt;/td&gt;</FONT> </SPAN>
+            <DD><SPAN><FONT color=#ff6ab5>&lt;td&gt;</FONT>61%<FONT 
+            color=#ff6ab5>&lt;/td&gt;</FONT> </SPAN>
+            <DD><SPAN><FONT color=#ff6ab5>&lt;td&gt;</FONT>39%<FONT 
+            color=#ff6ab5>&lt;/td&gt;</FONT> 
+            <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<FONT 
+            color=#009595>&lt;/tr&gt;</FONT> <BR><FONT 
+            color=#009b00>&lt;/table&gt;</FONT> <BR><FONT 
+            color=#004f9d>&lt;/center&gt;</FONT> </SPAN></DD></TD></TR>
+        <TR>
+          <TD width="4%" bgColor=#0000b7><SPAN><FONT 
+            color=#ffffff>显示结果</FONT></SPAN></TD>
+          <TD bgColor=#ffffff>
+            <P>
+            <CENTER>
+            <TABLE cellSpacing=0 cellPadding=2 width=350 align=center 
+              border=1><CAPTION><SPAN>网页速成 八月份访客浏览器使用分析</SPAN></CAPTION>
+              
+              <TR align=middle>
+                <TH><SPAN>Month</SPAN></TH>
+                <TH><SPAN>% of IE visitor</SPAN></TH>
+                <TH><SPAN>% of NC visitor</SPAN></TH></TR>
+              <TR align=middle>
+                <TD><SPAN>August</SPAN></TD>
+                <TD><SPAN>61%</SPAN></TD>
+                <TD><SPAN>39%</SPAN></TD></TR></TABLE></CENTER></TD></TR></TABLE></P></TD></TR></TABLE><SPAN 
+class=large><FONT 
+color=#000000></FONT></SPAN><!-- #EndEditable --><BR></b></font></span></p>
+
+</body>
+
+</html>

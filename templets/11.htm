@@ -1,0 +1,389 @@
+<html>
+
+<head>
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>大学生结构模型参赛手册</title>
+<style>
+<!--
+.large {  font-size: 10.5pt;line-height: 16pt}
+-->
+</style>
+<link type="text/css" rel="stylesheet" href="video/ckplayer/css/ckplayer.css" />
+		<!--
+			如果需要使用其它语言，请在此处引入相应的js,比如:<script type="text/javascript" src="video/ckplayer/language/en.js" charset="UTF-8"></script>
+		-->
+		<script type="text/javascript" src="video/ckplayer/js/ckplayer.min.js" charset="UTF-8"></script>
+</head>
+
+<body>
+<DIV style="FONT-SIZE: 9pt;"> <CENTER class=large><font size="4"><b>河南省第二届结构设计比赛</b></font></br>
+<font size="3"><b>举办地点：河南大学</br>
+举办时间：2013年11月  </br>
+参赛资格：设置有土木工程及相关专业的高校</br>
+竞赛题目：顶部中间承受集中荷载作用的单层房屋结构模型  </br>
+竞赛内容：方案设计与理论分析、结构模型制作、作品介绍与答辩、模型加载试验</br></b></font>
+
+</br> </CENTER></div>
+ 
+<TABLE cellSpacing=2 cellPadding=2 width="100%" border=0>
+        
+        <TR>
+          <TD width=60% bgColor=#fde2bf><SPAN><A href="">ansys命令流分析结构模型案例</A></SPAN></TD>
+          <TD width=40% bgColor=#fbdff8><SPAN   style="FONT-SIZE: 9pt; FONT-FAMILY: 新细明体">ansys命令流</SPAN></TD></TR>
+        <TR>
+          <TD>
+            <TABLE cellSpacing=0 cellPadding=2 width=500 border=1 align=top>
+              
+              <TR>
+                <TD><SPAN><img src=img/13.jpg> </SPAN></TD></TR>
+ <TR>
+                <TD><SPAN><img src=img/14.jpg> </SPAN></TD></TR>
+ <TR>
+                <TD><SPAN><img src=img/15.jpg> </SPAN></TD></TR>
+ <TR>
+                <TD><SPAN><img src=img/16.jpg> </SPAN></TD></TR>
+ <TR>
+                <TD><SPAN><img src=img/17.jpg> </SPAN></TD></TR>
+ <TR>
+                <TD><SPAN><img src=img/12.jpg> </SPAN></TD></TR>
+              <TR>
+                <TD width=500 height=500>
+		<div class="video" style="width: 100%; height: 500px;max-width: 800px;">播放容器</div>
+		<script>
+			//调用开始
+			var videoObject = {
+				container: '.video', //视频容器
+				poster:'img/simulation/model7.jpg',//封面图片
+				video:'video/ansysinputbox.mp4'//视频地址
+			};
+			var player=new ckplayer(videoObject)//调用播放器并赋值给变量player
+			/*
+			 * ===============================================================================================
+			 * 以上代码已完成调用演示，下方的代码是演示监听动作和外部控制的部分
+			 * ===============================================================================================
+			 * ===============================================================================================
+			 */
+			player.play(function(){
+				document.getElementById('state').innerHTML='监听到播放';
+			});
+			player.pause(function(){
+				document.getElementById('state').innerHTML='监听到暂停';
+			});
+			player.volume(function(vol){
+				document.getElementById('state').innerHTML='监听到音量改变：'+vol;
+			});
+			player.muted(function(b){
+				document.getElementById('state2').innerHTML='监听到静音状态：'+b;
+			});
+			player.full(function(b){
+				document.getElementById('state').innerHTML='监听到全屏状态：'+b;
+			});
+			player.ended(function(){
+				document.getElementById('state').innerHTML='监听到播放结束';
+			});
+		</script>
+		<p>商丘师范学院建筑工程学院官网：<a href="https://jzytmgcxy.sqnu.edu.cn/" target="_blank">https://jzytmgcxy.sqnu.edu.cn/</a></p>
+		<p>商丘师范学院大学生结构设计协会手册：<a href="https://jzytmgcxy.sqnu.edu.cn/" target="_blank">https://jzytmgcxy.sqnu.edu.cn/</a></p>
+		<p>技术支持：<A href="mailto:hnbim@qq.com">商丘师范学院大学生结构模型协会</A></p></TD></TR></TABLE> </TD>
+          <TD width=40%><SPAN><p align="center">
+/FILENAME,rainbow</br>
+/UNITS,SI</br>
+/TITLE,rainbow</br>
+/CONFIG,NRES,200000</br>
+*SET,LONG,1500</br>
+*SET,NE,8</br>
+*SET,DL,LONG/NE</br>
+*SET,NN,NE+1</br>
+*SET,FF,500</br>
+*SET,VV,40 ！移动速度</br>
+*SET,DT,DL/VV*3.6 ！移动经过每一个单元所需要的时间</br>
+
+
+/prep7</br>
+n,1001,0,0,0</br>
+n,1002,180,0,0</br>
+n,1003,0,0,433</br>
+n,1004,180,0,433</br>
+n,1005,0,0,250</br>
+n,1006,180,0,250</br>
+
+
+n,2001,0,250,0</br>
+n,2002,180,250,0</br>
+n,2003,0,250,433</br>
+n,2004,180,250,433</br>
+n,2005,0,250,250</br>
+n,2006,180,250,250</br>
+!三级加载点</br>
+n,2015,0,250,150</br>
+
+n,8001,0,1250,0</br>
+n,8002,180,1250,0</br>
+n,8003,0,1250,433</br>
+n,8004,180,1250,433</br>
+n,8005,0,1250,250</br>
+n,8006,180,1250,250</br>
+
+n,9001,0,1500,0</br>
+n,9002,180,1500,0</br>
+n,9003,0,1500,433</br>
+n,9004,180,1500,433</br>
+n,9005,0,1500,250</br>
+n,9006,180,1500,250</br>
+
+
+
+
+ngen,6,1000,2003,2006,1,0,167,0</br>
+
+NPLOT,1</br>
+NLIST</br>
+
+
+
+
+
+et,1,link8</br>
+et,2,link10</br>
+et,3,shell63</br>
+r,1,49</br>
+r,1,8</br>
+SSTIF,ON     </br>       
+mp,ex,1,2.1e11</br>
+mp,prxy,1,0.3</br>
+mp,dens,1,0</br>
+
+
+sectype,1,beam,rect    !桁架杆截面</br>
+
+
+!第一榀桥墩杆</br>
+E,1001,1005</br>
+E,1003,1005</br>
+E,1002,1006</br>
+E,1004,1006</br>
+E,1003,1004</br>
+E,1001,1006</br>
+E,1002,1005</br>
+E,1005,1006</br>
+!第二榀桥墩杆</br>
+E,2001,2005</br>
+E,2003,2005</br>
+E,2002,2006</br>
+E,2004,2006</br>
+E,2003,2004</br>
+E,2001,2006</br>
+E,2002,2005</br>
+E,2005,2006</br>
+!第八榀桥墩杆</br>
+E,8001,8005</br>
+E,8003,8005</br>
+E,8002,8006</br>
+E,8004,8006</br>
+E,8003,8004</br>
+E,8001,8006</br>
+E,8002,8005</br>
+E,8005,8006</br>
+!第九榀桥墩杆</br>
+E,9001,9005</br>
+E,9003,9005</br>
+E,9002,9006</br>
+E,9004,9006</br>
+E,9003,9004</br>
+E,9001,9006</br>
+E,9002,9005</br>
+E,9005,9006</br>
+
+
+E,3003,3004</br>
+E,3005,3006</br>
+E,3003,3005</br>
+E,3004,3006</br>
+
+
+
+E,4003,4004</br>
+E,4005,4006</br>
+E,4003,4005</br>
+E,4004,4006</br>
+
+
+
+E,5003,5004</br>
+E,5005,5006</br>
+E,5003,5005</br>
+E,5004,5006</br>
+
+
+E,6003,6004</br>
+E,6005,6006</br>
+E,6003,6005</br>
+E,6004,6006</br>
+
+
+E,7003,7004</br>
+E,7005,7006</br>
+E,7003,7005</br>
+E,7004,7006</br>
+
+
+E,1003,2003</br>
+E,1004,2004
+</br>
+E,2003,3003</br>
+E,2004,3004</br>
+E,3003,4003</br>
+E,3004,4004</br>
+E,4003,5003</br>
+E,4004,5004</br>
+E,5003,6003</br>
+E,5004,6004</br>
+E,6003,7003</br>
+E,6004,7004</br>
+E,7003,8003</br>
+E,7004,8004</br>
+E,8003,9003</br>
+E,8004,9004</br>
+
+
+
+E,2005,3005</br>
+E,2006,3006</br>
+E,3005,4005</br>
+E,3006,4006</br>
+E,4005,5005</br>
+E,4006,5006</br>
+E,5005,6005</br>
+E,5006,6006</br>
+E,6005,7005</br>
+E,6006,7006</br>
+E,7005,8005</br>
+E,7006,8006</br>
+!斜杆</br>
+E,1005,2003</br>
+E,1006,2004</br>
+E,2005,3003</br>
+E,2006,3004</br>
+E,3005,4003</br>
+E,3006,4004</br>
+E,4005,5003</br>
+E,4006,5004</br>
+
+E,9005,8003</br>
+E,9006,8004</br>
+E,8005,7003</br>
+E,8006,7004</br>
+E,7005,6003</br>
+E,7006,6004</br>
+E,6005,5003</br>
+E,6006,5004</br>
+!跨下斜杆</br>
+E,8001,6005</br>
+E,8002,6006</br>
+E,2001,4005</br>
+E,2002,4006</br>
+!生成顶面桥面</br>
+KNODE,1103,1003</br>
+KNODE,2103,2003</br>
+KNODE,3103,3003</br>
+KNODE,4103,4003</br>
+KNODE,5103,5003</br>
+KNODE,6103,6003</br>
+KNODE,7103,7003</br>
+KNODE,8103,8003</br>
+KNODE,9103,9003</br>
+KNODE,1104,1004</br>
+KNODE,2104,2004</br>
+KNODE,3104,3004</br>
+KNODE,4104,4004</br>
+KNODE,5104,5004</br>
+KNODE,6104,6004</br>
+KNODE,7104,7004</br>
+KNODE,8104,8004</br>
+KNODE,9104,9004</br>
+!生成顶面桥面</br>
+a,1103,2103,3103,4103,5103,6103,7103,8103,9103,9104,8104,7104,6104,5104,4104,3104,2104,1104</br>
+
+
+cp,1,all,2015,2005</br>
+
+
+
+nummrg,all</br>
+esize,all,1</br>
+amesh,all</br>
+EPLOT</br>
+ELIST</br>
+
+/solu</br>
+!施加边界条件</br>
+antype,trans</br>
+D,1001,all</br>
+D,1002,all</br>
+D,2001,all</br>
+D,2002,all</br>
+
+D,8001,all</br>
+D,8002,all</br>
+D,9001,all</br>
+D,9002,all</br>
+
+TRNOPT,FULL ！瞬态求解方法设置为完全法</br>
+TIMINT,OFF ！关闭积分效应</br>
+OUTRES,BASIC,ALL</br>
+
+SSTIF,ON ！打开应力钢化效应</br>
+ACEL,0,9.8,0</br>
+ALLS</br>
+
+!一级施加荷载</br>
+TIMINT,ON</br>
+
+*DO,II,1,NN,1</br>
+OUTRES,ALL,ALL</br>
+TIME,II*DT</br>
+
+FDELE,ALL,ALL</br>
+NSEL,S,LOC,Z,433</br>
+
+NSEL,R,LOC,Y,(II-1)*DL,II*DL</br>
+esln,s</br>
+SFE,ALL,1,pres,,FF</br>
+/psf,pres,norm,2</br>
+ALLSEL ALL</br>
+eplot</br>
+SOLVE</br>
+*ENDDO</br>
+!二级施加荷载</br>
+OUTRES,BASIC,ALL</br>
+TIME,10*DT</br>
+FDELE,ALL,ALL</br>
+NSEL,S,LOC,Z,433</br>
+NSEL,R,LOC,Y,600,900</br>
+esln,s</br>
+SFE,ALL,2,pres,,-1000</br>
+/psf,pres,norm,2,0,1   !显示荷载</br>
+ALLSEL ALL</br>
+SOLVE</br>
+!三级施加荷载</br>
+OUTRES,BASIC,ALL</br>
+TIME,30*DT</br>
+FDELE,ALL,ALL</br>
+F,2015,FZ,-20</br>
+F,2015,FX,30</br>
+
+ALLSEL ALL</br>
+
+eplot</br>
+SOLVE
+
+</br>
+      
+　</p> </SPAN> </DD></TD></TR></TABLE>
+
+</body>
+
+</html>
+
